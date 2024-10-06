@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>center.html</title>
+    <style>
+      .flex {
+        display: flex;
+        min-height: 3rem;
+        border: 1px solid red;
+      }
+      .flex > div {
+        border: 1px solid blue;
+      }
+      .align-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 0.2rem;
+        border-radius: 0.2rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      在CSS中，<code>align-items</code>和<code>justify-content</code>是用来控制flex容器中的子元素的对齐方式的。
+    </p>
+    <p>
+      <code>align-items</code
+      >是用来控制子元素在交叉轴上的对齐方式的，而<code>justify-content</code>是用来控制子元素在主轴上的对齐方式的。
+      Flexbox中，主轴的默认方向是从左到右，交叉轴的默认方向是从上到下。因此，<code>align-items</code>是用来控制子元素在垂直方向上的对齐方式的，
+      而<code>justify-content</code>是用来控制子元素在水平方向上的对齐方式的。
+    </p>
+
+    <hr />
+
+    <p>
+      下面是一个flex容器，里面有三个子元素。三个元素在容器的垂直方向（交叉轴）居中对齐。
+      第二各元素的字体大小是1.5em，所以它的高度会比其他两个元素高。但仍与其他方块在垂直方向上居中对齐。
+    </p>
+    <div class="flex align-center">
+      <div>a</div>
+      <div style="font-size: 1.5em">a</div>
+      <div>a</div>
+    </div>
+
+    <hr />
+    <p>
+      下面是一个flex容器，里面有三个子元素。三个元素在容器的水平方向（主轴）居中对齐。
+      <code>justify-content: center</code
+      >属性是用来控制子元素在水平方向上的对齐方式的。
+    </p>
+    <div class="flex justify-center">
+      <div>a</div>
+      <div>a</div>
+      <div>a</div>
+    </div>
+    <hr />
+    <p>
+      下面是一个flex容器，里面有三个子元素。三个元素在容器的水平方向（主轴）和垂直方向（交叉轴）都居中对齐。
+      <code>justify-content: center; align-items: center</code>
+    </p>
+    <div class="flex justify-center align-center">
+      <div>a</div>
+      <div>a</div>
+      <div>a</div>
+    </div>
+  </body>
+</html>

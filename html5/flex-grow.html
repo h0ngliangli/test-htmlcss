@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-grow attribute</title>
+    <style>
+      body {
+        width: 600px;
+        margin: 0 auto;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      .flex-grow-container {
+        display: flex;
+        gap: 1rem;
+        border-style: dotted;
+        border-width: 2px;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+      .flex-grow-container div {
+        padding: 0.5rem;
+        text-align: center;
+        border: 1px solid #000;
+        width: 80px;
+        border-radius: 5px;
+        background-color: beige;
+      }
+
+      #flex-grow-1 div {
+        flex-grow: 1;
+      }
+
+      #flex-grow-121 div:nth-child(1) {
+        flex-grow: 1;
+      }
+      #flex-grow-121 div:nth-child(2) {
+        flex-grow: 2;
+      }
+      #flex-grow-121 div:nth-child(3) {
+        flex-grow: 1;
+      }
+      .market-list {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .market-list li {
+        margin: 0.1rem;
+      }
+      .market-list img {
+        width: 65px;
+        height: auto;
+        border-radius: 5px;
+      }
+      #plant-list {
+        border-style: none;
+        padding: 0;
+        display: flex;
+        /* gap: 0.1rem; */
+        /* justify-content: center; */
+        flex-wrap: wrap;
+      }
+      #plant-list img {
+        width: 65px;
+        height: auto;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex-grow属性</h1>
+    <section>
+      <p>
+        flex-grow是flex布局中的一个属性，用于控制子元素的放大比例。
+        它不会影响子元素的最小大小，而是决定它们在容器中的额外扩展空间。
+        它指定了一个比例因子，表示子元素和其他子元素在分配剩余空间时的
+        放大比例。
+      </p>
+      <p>
+        如果所有子元素的flex-grow属性都为1， 则它们将等分剩余空间。
+        如果一个子元素的flex-grow属性为2，
+        其他项目都为1，则前者占据的剩余空间将比其他项目多一倍。
+        它的默认值是0，表示不放大。
+      </p>
+      <p>语法：</p>
+      <pre>
+    .item {
+        flex-grow: number; /* default 0 */
+    }
+        </pre
+      >
+      <p>number是一个无单位的数字，表示放大比例。</p>
+      <ul>
+        <li>0：不放大（默认值）</li>
+        <li>1：等分剩余空间</li>
+        <li>大于1：占据剩余空间的比例</li>
+      </ul>
+    </section>
+    <section>
+      <h2>示例1: 默认情况下，flex-grow 为 0。</h2>
+      <div class="flex-grow-container" id="flex-grow-default">
+        <div>Home</div>
+        <div>Contact</div>
+        <div>About</div>
+      </div>
+      <p>
+        所有子元素都有相同的固定宽度 100px，且不会扩展以填充父容器的剩余空间。
+      </p>
+    </section>
+    <section>
+      <h2>示例2: 使用 flex-grow: 1 让元素扩展</h2>
+      <div class="flex-grow-container" id="flex-grow-1">
+        <div>Life is short.</div>
+        <div>You can't make someone feel good until you feel good.</div>
+        <div>The days that break you are the days that make you.</div>
+      </div>
+      <p>
+        每个子元素会自动扩展以填充父容器的剩余空间。由于每个子元素的 flex-grow
+        值相同，所有元素会均匀地分配多余空间。
+      </p>
+    </section>
+    <section>
+      <h2>示例3: 使用不同的 flex-grow 值</h2>
+      <div class="flex-grow-container" id="flex-grow-121">
+        <div>
+          <header>Plants</header>
+          <div id="plant-list">
+            <img
+              src="https://media.gettyimages.com/id/1404421800/vector/save-the-environment-line-icon-with-editable-stroke.jpg?s=612x612&w=0&k=20&c=8irxF2Q6XmSV2IAT15imcv-u2ugupXrECSmXtvWdVuI="
+              alt="plant 1"
+            />
+            <img
+              src="https://media.gettyimages.com/id/1216424127/vector/ecology-line-icon-with-editable-stroke-and-pixel-perfect.jpg?s=612x612&w=0&k=20&c=WkOINz07-JUwyP7mxvbZGPKdB_kjBRtuQ9GqNqQqOP4="
+              alt="plant 2"
+            />
+
+            <img
+              src="https://media.gettyimages.com/id/1337757805/vector/watercolor-green-sprout-logo.jpg?s=612x612&w=0&k=20&c=7J-hyHVXzby2VMDdYusWXBvjHtD-o1LWN3gRMmOVH0Q="
+              alt="plant 3"
+            />
+            <img
+              src="https://media.gettyimages.com/id/684807306/vector/watercolor-tree-logo.jpg?s=612x612&w=0&k=20&c=me-MvvYchfhCVwOj0f5qs0ytxx3Q5krBLVMCWAI0gyA="
+              alt="plant 4"
+            />
+          </div>
+        </div>
+        <div>
+          <header>Plants</header>
+        </div>
+        <div>
+          <header>Pets</header>
+          <ul class="market-list">
+            <li>
+              <img
+                src="https://media.gettyimages.com/id/182176351/photo/a-picture-of-a-cat-on-a-white-background-looking-up.jpg?s=612x612&w=0&k=20&c=r212NUpF1oKJXU7MZd-qe_hROc1espH5qDCshKkakRI="
+                alt="cats"
+              />
+            </li>
+            <li>
+              <img
+                src="https://media.gettyimages.com/id/184972539/photo/american-staffordshire-terrier-obedience-training.jpg?s=612x612&w=0&k=20&c=BNU0keE2-vpHC298LkwbEG-gtIUAznZ1JS9jKaId63c="
+                alt="dogs"
+              />
+            </li>
+            <li>
+              <img
+                src="https://media.gettyimages.com/id/2076374603/vector/chicken-and-poultry-line-icon.jpg?s=612x612&w=0&k=20&c=zYI1mOyd2D5ZqGeHV1KxEXuIwBhO76Cb5mmbT0iHa38="
+                alt="chickens"
+              />
+            </li>
+            <li>
+              <img
+                src="https://media.gettyimages.com/id/98259788/photo/white-horse-eye.jpg?s=612x612&w=0&k=20&c=_7b_PL7uTqLZJ5DmOyRVA8Yf4_vinNZq9xY767YzwJE="
+                alt="horses"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        在这个例子中，第二个子元素的 flex-grow 值是
+        2，因此它占据的剩余空间会比其他两个元素多一倍。
+      </p>
+    </section>
+    <footer>
+      <p>&copy; 2024</p>
+    </footer>
+  </body>
+</html>

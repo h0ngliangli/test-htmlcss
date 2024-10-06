@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre element</title>
+  </head>
+  <body>
+    <p>How to use JavaScript to display the year:</p>
+    <pre>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.getFullYear();
+    </pre>
+    <p>Click the button to display the year.</p>
+    <button onclick="displayYear()">Try it</button>
+    <p id="demo"></p>
+    <script>
+      function displayYear() {
+        var d = new Date()
+        // innerHTML是string类型，所以d.getFullYear()会被转换为string类型。
+        document.getElementById("demo").innerHTML = d.getFullYear()
+      }
+    </script>
+  </body>
+</html>
