@@ -1,111 +1,133 @@
 :root {
-    --color-primary: #333;
-    --color-secondary: #666;
-    --color-tertiary: #999;
-    --color-quaternary: #ccc;
-    --color-quinary: #fff;
-    --color-bg: #f0f0f0;
-    --color-bg-secondary: #f8f8f8;
-    --color-bg-tertiary: #fafafa;
-    --color-bg-quaternary: #fcfcfc;
-    --color-bg-quinary: #fff;
-    --color-bg-hover: #e0e0e0;
-    --color-bg-hover-secondary: #e8e8e8;
-    --color-bg-hover-tertiary: #eaeaea;
-    --color-bg-hover-quaternary: #ececec;
-    --color-bg-hover-quinary: #f2f2f2;
-    --color-bg-active: #d4d4d4;
-    --color-bg-active-secondary: #dcdcdc;
-    --color-bg-active-tertiary: #dedede;
-    --color-bg-active-quaternary: #e0e0e0;
-    --color-bg-active-quinary: #e6e6e6;
-    --color-bg-disabled: #f0f0f0;
-    --color-bg-disabled-secondary: #f8f8f8;
-    --color-bg-disabled-tertiary: #fafafa;
-    --color-bg-disabled-quaternary: #fcfcfc;
-    --color-bg-disabled-quinary: #fff;
-    --color-bg-disabled-hover: #f0f0f0;
-    --color-bg-disabled-hover-secondary: #f8f8f8;
-    --color-bg-disabled-hover-tertiary: #fafafa;
-    --color-bg-disabled-hover-quaternary: #fcfcfc;
-    --color-bg-disabled-hover-quinary: #fff;
-    --color-bg-disabled-active: #f0f0f0;
-    --color-bg-disabled-active-secondary: #f8f8f8;
-    --color-bg-disabled-active-tertiary: #fafafa;
-    --color-bg-disabled-active-quaternary: #fcfcfc;
-    --color-bg-disabled-active-quinary: #fff;
-    --color-bg-disabled-disabled: #f0f0f0;
-    --color-bg-disabled-disabled-secondary: #f8f8f8
+  --color-primary: #333;
+  --color-secondary: #666;
+  --color-tertiary: #999;
+  --color-quaternary: #ccc;
+  --color-quinary: #fff;
+  --color-bg: #f0f0f0;
+  --color-bg-secondary: #f8f8f8;
+  --color-bg-tertiary: #fafafa;
+  --color-bg-quaternary: #fcfcfc;
+  --color-bg-quinary: #fff;
+  --color-bg-hover: #e0e0e0;
+  --color-bg-hover-secondary: #e8e8e8;
+  --color-bg-hover-tertiary: #eaeaea;
+  --color-bg-hover-quaternary: #ececec;
+  --color-bg-hover-quinary: #f2f2f2;
+  --color-bg-active: #d4d4d4;
+  --color-bg-active-secondary: #dcdcdc;
+  --color-bg-active-tertiary: #dedede;
+  --color-bg-active-quaternary: #e0e0e0;
+  --color-bg-active-quinary: #e6e6e6;
+  --color-bg-disabled: #f0f0f0;
+  --color-bg-disabled-secondary: #f8f8f8;
+  --color-bg-disabled-tertiary: #fafafa;
+  --color-bg-disabled-quaternary: #fcfcfc;
+  --color-bg-disabled-quinary: #fff;
+  --color-bg-disabled-hover: #f0f0f0;
+  --color-bg-disabled-hover-secondary: #f8f8f8;
+  --color-bg-disabled-hover-tertiary: #fafafa;
+  --color-bg-disabled-hover-quaternary: #fcfcfc;
+  --color-bg-disabled-hover-quinary: #fff;
+  --color-bg-disabled-active: #f0f0f0;
+  --color-bg-disabled-active-secondary: #f8f8f8;
+  --color-bg-disabled-active-tertiary: #fafafa;
+  --color-bg-disabled-active-quaternary: #fcfcfc;
+  --color-bg-disabled-active-quinary: #fff;
+  --color-bg-disabled-disabled: #f0f0f0;
+  --color-bg-disabled-disabled-secondary: #f8f8f8;
 }
 
 .dark-mode {
-    --color-primary: #fff;
-    --color-secondary: #ccc;
-    --color-tertiary: #999;
-    --color-quaternary: #666;
-    --color-quinary: #333;
-    --color-bg: #333;
-    --color-bg-secondary: #2c2c2c;
-    --color-bg-tertiary: #292929;
-    --color-bg-quaternary: #272727;
-    --color-bg-quinary: #222;
-    --color-bg-hover: #4c4c4c;
-    --color-bg-hover-secondary: #444;
-    --color-bg-hover-tertiary: #424242;
-    --color-bg-hover-quaternary: #404040;
-    --color-bg-hover-quinary: #3a3a3a;
-    --color-bg-active: #1f1f1f;
-    --color-bg-active-secondary: #171717;
-    --color-bg-active-tertiary: #151515;
-    --color-bg-active-quaternary: #131313;
-    --color-bg-active-quinary: #0d0d0d;
-    --color-bg-disabled: #333;
-    --color-bg-disabled-secondary: #2c2c2c;
-    --color-bg-disabled-tertiary: #292929;
-    --color-bg-disabled-quaternary: #272727;
-    --color-bg-disabled-quinary: #222;
-    --color-bg-disabled-hover: #333;
-    --color-bg-disabled-hover-secondary: #2c2c2c;
-    --color-bg-disabled-hover-tertiary: #292929;
-    --color-bg-disabled-hover-quaternary: #272727;
-    --color-bg-disabled-hover-quinary: #222;
-    --color-bg-disabled-active: #333;
-    --color-bg-disabled-active-secondary: #2c2c2c;
-    --color-bg-disabled-active-tertiary: #292929;
-    --color-bg-disabled-active-quaternary: #272727;
-    --color-bg-disabled-active-quinary: #222;
-    --color-bg-disabled-disabled: #333;
-    --color-bg-disabled-disabled-secondary: #2c2c2c
+  --color-primary: #fff;
+  --color-secondary: #ccc;
+  --color-tertiary: #999;
+  --color-quaternary: #666;
+  --color-quinary: #333;
+  --color-bg: #333;
+  --color-bg-secondary: #2c2c2c;
+  --color-bg-tertiary: #292929;
+  --color-bg-quaternary: #272727;
+  --color-bg-quinary: #222;
+  --color-bg-hover: #4c4c4c;
+  --color-bg-hover-secondary: #444;
+  --color-bg-hover-tertiary: #424242;
+  --color-bg-hover-quaternary: #404040;
+  --color-bg-hover-quinary: #3a3a3a;
+  --color-bg-active: #1f1f1f;
+  --color-bg-active-secondary: #171717;
+  --color-bg-active-tertiary: #151515;
+  --color-bg-active-quaternary: #131313;
+  --color-bg-active-quinary: #0d0d0d;
+  --color-bg-disabled: #333;
+  --color-bg-disabled-secondary: #2c2c2c;
+  --color-bg-disabled-tertiary: #292929;
+  --color-bg-disabled-quaternary: #272727;
+  --color-bg-disabled-quinary: #222;
+  --color-bg-disabled-hover: #333;
+  --color-bg-disabled-hover-secondary: #2c2c2c;
+  --color-bg-disabled-hover-tertiary: #292929;
+  --color-bg-disabled-hover-quaternary: #272727;
+  --color-bg-disabled-hover-quinary: #222;
+  --color-bg-disabled-active: #333;
+  --color-bg-disabled-active-secondary: #2c2c2c;
+  --color-bg-disabled-active-tertiary: #292929;
+  --color-bg-disabled-active-quaternary: #272727;
+  --color-bg-disabled-active-quinary: #222;
+  --color-bg-disabled-disabled: #333;
+  --color-bg-disabled-disabled-secondary: #2c2c2c;
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--color-primary);
-    background-color: var(--color-bg);
-    margin: 0;
-    padding: 0
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    /* 需要在设置button的color, background-color,因为
+  /* 需要在设置button的color, background-color,因为
     浏览器会对form元素有特别处理。 */
-    color: var(--color-primary);
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-secondary);
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 button:hover {
-    background-color: var(--color-bg-hover);
-    border-color: var(--color-secondary)
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-secondary);
 }
 
 button:active {
-    background-color: var(--color-bg-active);
-    border-color: var(--color-secondary)
+  background-color: var(--color-bg-active);
+  border-color: var(--color-secondary);
+}
+
+header {
+  background-color: var(--color-bg-secondary);
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.flex-on-right {
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+#category {
+  margin-right: 1rem;
+  min-height: 10rem;
 }
