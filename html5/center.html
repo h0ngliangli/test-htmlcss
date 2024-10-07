@@ -1,94 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>centered body element</title>
-    <style>
-      body {
-        width: 650px;
-        margin: 0 auto;
-        border: 1px solid #000;
-      }
-      header h1 {
-        text-align: center;
-      }
-      header nav {
-        background-color: beige;
-        border-radius: 5px;
-      }
-      header nav ul {
-        list-style: inside square;
-        /* list-style-type: none; */
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0 0;
-      }
-      header a {
-        text-decoration: none;
-        color: #4d4c4c;
-      }
-      aside {
-        background-color: #fdfdfd;
-        border-radius: 5px;
-        flex-grow: 1;
-      }
-      main {
-        display: flex;
-        /* justify-content: space-between; */
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>centered body element</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <p>
-          通过设置<code>body</code>的<code>width</code>和
-          <code>margin</code>可以使得<code>body</code>居中。
-        </p>
-        <pre>
-          body {
-            width: 500px;
-            margin: 0 auto;
-            border: 1px solid #000;
-          }
-        </pre>
-        <p>这是通过以下原理实现的：</p>
-        <ol>
-          <li>
-            <strong><code>width: 750px;</code></strong>
-            <p>
-              设置<code>body</code>的宽度,这样<code>body</code>就不会占据整个视口的宽度。
-            </p>
-          </li>
-          <li>
-            <strong><code>margin: 0 auto;</code></strong>
-            <p>
-              设置<code>body</code>的左右外边距为<code>auto</code>，这样<code>body</code>就会在视口中水平居中。
-            </p>
-          </li>
-        </ol>
-      </article>
-      <aside>
-        keyword
-        <ul>
-          <li>flex-grow</li>
-        </ul>
-      </aside>
-    </main>
-    <footer>
-      <p>&copy; 2024</p>
-    </footer>
-  </body>
-</html>
+<h2>centered body</h2>
+<p>
+  通过设置<code>body</code>的<code>width</code>和
+  <code>margin</code>可以使得<code>body</code>居中。
+</p>
+<pre>
+  body {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+</pre>
+<p>这是通过以下原理实现的：</p>
+<ol>
+  <li>
+    <strong><code>width: 750px;</code></strong>
+    <p>
+      设置<code>body</code>的宽度,这样<code>body</code>就不会占据整个视口的宽度。
+    </p>
+  </li>
+  <li>
+    <strong><code>margin: 0 auto;</code></strong>
+    <p>
+      设置<code>body</code>的左右外边距为<code>auto</code>，这样<code>body</code>就会在视口中水平居中。
+    </p>
+  </li>
+</ol>
