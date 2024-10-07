@@ -110,6 +110,17 @@ button:active {
   border-color: var(--color-secondary);
 }
 
+a:link,
+a:visited {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
 header {
   background-color: var(--color-bg-secondary);
   padding: 0.5rem;
@@ -118,16 +129,20 @@ header {
   align-items: center;
 }
 
-.flex-on-right {
-  margin-left: auto;
-}
-
 h1 {
   font-size: 24px;
   margin: 0;
 }
 
-#category {
+.flex-on-right {
+  margin-left: auto;
+}
+
+#ul-category-area {
   margin-right: 1rem;
   min-height: 10rem;
+}
+
+#section-content-area {
+  padding: 0 1rem; /* 两边留白，易于阅读 */
 }

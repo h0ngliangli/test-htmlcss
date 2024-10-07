@@ -4,8 +4,8 @@ toggleBtn.addEventListener("click", function () {
   body.classList.toggle("dark-mode")
 })
 
-const categoryItems = document.querySelectorAll("#category li")
-const contentArea = document.querySelector("#content-area")
+const categoryItems = document.querySelectorAll("#ul-category-area li")
+const contentArea = document.querySelector("#section-content-area")
 categoryItems.forEach((item) => {
   item.addEventListener("click", function (event) {
     event.preventDefault()
