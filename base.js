@@ -1,19 +1,38 @@
+const body = document.querySelector("body")
+
+// Pick up the theme from the local storage
+const theme = localStorage.getItem("theme")
+if (theme === "dark") {
+  body.classList.add("dark-mode")
+} else {
+  body.classList.remove("dark-mode")
+}
+
 const btnToggleTheme = document.querySelector("#button-toggle-theme")
 btnToggleTheme.addEventListener("click", function () {
-  const body = document.querySelector("body")
   body.classList.toggle("dark-mode")
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark")
+  } else {
+    localStorage.setItem("theme", "light")
+  }
 })
 
-const categoryItems = document.querySelectorAll("#ul-category-area li")
-const contentArea = document.querySelector("#section-content-area")
-categoryItems.forEach((item) => {
-  item.addEventListener("click", function (event) {
+const liPages = document.querySelectorAll("#ul-table-of-content li")
+const secContentArea = document.querySelector("#section-content-area")
+const lastAccessPage = localStorage.getItem("lastAccessPage")
+liPages.forEach((liPage) => {
+  liPage.addEventListener("click", function (event) {
     event.preventDefault()
-    const url = item.children[0].href
+    const url = liPage.children[0].href
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        contentArea.innerHTML = html
+        secContentArea.innerHTML = html
+        localStorage.setItem("lastAccessPage", url)
       })
   })
+  if (lastAccessPage && liPage.children[0].href === lastAccessPage) {
+    liPage.click()
+  }
 })
