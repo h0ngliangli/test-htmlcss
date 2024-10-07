@@ -1,0 +1,61 @@
+<h2>Shadow DOM</h2>
+<p>
+  Shadow DOM 是一种更高级的技术，可以将 CSS 样式完全封装在一个特定的 DOM
+  树中，确保样式不会泄露到外部，外部的样式也不会影响到内部。
+</p>
+<pre>
+      const shadowHost = document.getElementById("myDiv")
+      const shadowRoot = shadowHost.attachShadow({ mode: "open" })
+
+      // 创建样式和内容
+      shadowRoot.innerHTML = `
+            &lt;style&gt;
+                ...
+            &lt;/style&gt;
+            &lt;h1>Heading inside Shadow DOM&lt;/h1&gt;
+            &lt;p>Paragraph inside Shadow DOM&lt;/p&gt;
+        `
+</pre>
+<p>
+  解释： Shadow DOM 是一种强大的方式，能够创建独立的 DOM
+  树，并完全封装样式，避免污染全局的 CSS。 在 Shadow DOM
+  中定义的样式只会作用于该 DOM 树内的元素，不会影响其他页面部分。
+</p>
+
+<p>
+  <code>const shadowRoot = shadowHost.attachShadow({ mode: 'open' });</code
+  >是用于创建 Shadow DOM 的代码，它为 shadowHost 元素（通常是一个 HTML
+  元素）附加一个Shadow DOM 树，并将其与主文档的 DOM 树隔离开。
+</p>
+<p>详细解释：</p>
+<ul>
+  <li>
+    shadowHost 元素： shadowHost 是一个普通的 HTML 元素，它将作为 Shadow DOM
+    的“宿主”。这个宿主元素会包含一个 Shadow DOM 树，而这个 Shadow DOM
+    树的内容不会直接影响页面中的主 DOM。
+  </li>
+  <li>
+    attachShadow() 方法： attachShadow() 是一个方法，作用于任何可以作为 Shadow
+    DOM 宿主的元素（如div, span等），它用于为宿主元素创建一个 Shadow DOM。
+    该方法接收一个选项对象作为参数，常用的是 mode 选项。 返回值是创建的 Shadow
+    DOM 树的根（shadowRoot）。
+  </li>
+  <li>
+    { mode: 'open' } 参数： mode 决定了 Shadow DOM 的访问模式，有两个可能的值：
+    open：当模式为 open 时，你可以通过 shadowHost.shadowRoot 直接访问 Shadow DOM
+    树的根节点。 closed：当模式为 closed 时，无法通过 shadowHost.shadowRoot 访问
+    Shadow DOM 树，虽然它仍然存在，但只能通过 JavaScript 的内部引用访问。
+  </li>
+  <li>
+    shadowRoot： shadowRoot 是新创建的 Shadow DOM 的根元素，它是一个独立的 DOM
+    子树，包含样式和元素，但与宿主元素的主文档 DOM 隔离。
+  </li>
+</ul>
+<p>
+  Shadow DOM 的作用： 样式封装：Shadow DOM
+  中的样式不会影响主文档的样式，主文档的样式也不会影响 Shadow DOM 内的元素。 DOM
+  隔离：Shadow DOM
+  内的内容（包括元素和事件）是隔离的，外部无法直接操作，除非通过宿主元素内部的接口访问。
+  封装组件：Shadow DOM 通常用于 Web
+  组件，帮助开发者创建封装性强的、自给自足的组件，这些组件可以独立于页面的其他部分运行。
+</p>
