@@ -1,11 +1,17 @@
-使用自定义属性的规范方法：data-* 属性 HTML5 规定使用 data-*
-的形式来定义自定义属性，这样可以确保它们是合法的，并且不会影响 HTML
-的解析或与标准属性发生冲突。 示例： html
-
+<h2>自定义属性</h2>
+<p>
+  使b用自定义属性的规范方法：data-* 属性 HTML5 规定使用 data-*
+  的形式来定义自定义属性，这样可以确保它们是合法的，并且不会影响 HTML
+  的解析或与标准属性发生冲突。 示例： html
+</p>
+<textarea class="textarea-code" readonly>
 <div data-shadow="true">This div has a custom data attribute</div>
-如何通过 JavaScript 访问 data-* 属性： 你可以通过 JavaScript 来访问自定义的
-data-* 属性。使用 dataset 对象可以轻松获取这些属性。 示例： html
-
+</textarea>
+<p>
+  如何通过 JavaScript 访问 data-* 属性： 你可以通过 JavaScript 来访问自定义的
+  data-* 属性。使用 dataset 对象可以轻松获取这些属性。 示例： html
+</p>
+<textarea class="textarea-code" readonly>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,9 +32,9 @@ data-* 属性。使用 dataset 对象可以轻松获取这些属性。 示例：
     </script>
   </body>
 </html>
-
-解释： data-shadow="true" 是一个自定义的数据属性，表示该
-<div>
+</textarea>
+<p>
+  解释： data-shadow="true" 是一个自定义的数据属性，表示该div
   元素是否有某种阴影效果（true 表示有）。 在 JavaScript 中，使用
   myDiv.dataset.shadow 来获取 data-shadow 的值，dataset 会将 data-*
   属性转换为对象的属性。 为什么要使用 data-* 前缀？ 标准化：HTML5 提倡使用
@@ -38,18 +44,24 @@ data-* 属性。使用 dataset 对象可以轻松获取这些属性。 示例：
   可读性与语义性：通过 data-*
   前缀，开发者可以清楚地知道哪些属性是自定义的，不会与原生 HTML 属性混淆。
   非标准属性（无 data- 前缀） 尽管你可以直接添加任何自定义属性，例如
+</p>
+<textarea class="textarea-code" readonly>
+ 
   <div shadow="true">
-    ，但这并不是标准做法，可能会导致潜在的兼容性问题或与未来的 HTML
-    标准发生冲突。HTML5
-    规范并没有阻止你添加非标准的属性，但为了避免不必要的麻烦，建议使用 data-*
-    形式来添加自定义属性。 示例： html
-
+</textarea>
+<p>
+  ，但这并不是标准做法，可能会导致潜在的兼容性问题或与未来的 HTML
+  标准发生冲突。HTML5
+  规范并没有阻止你添加非标准的属性，但为了避免不必要的麻烦，建议使用 data-*
+  形式来添加自定义属性。 示例： html
+</p>
+<textarea class="textarea-code" readonly>
     <div shadow="true">Non-standard custom attribute</div>
-
-    虽然这段代码不会立即引起问题，但如果 HTML 标准未来定义了 shadow
-    作为一个合法属性，它可能会与该属性冲突。 小结： 你可以在 HTML
-    元素中使用自定义属性，但推荐使用 data-* 前缀的方式。 使用 data-*
-    属性可以确保自定义属性与标准属性的兼容性，且可以通过 JavaScript 的 dataset
-    轻松访问这些属性的值。
-  </div>
-</div>
+</textarea>
+<p>
+  虽然这段代码不会立即引起问题，但如果 HTML 标准未来定义了 shadow
+  作为一个合法属性，它可能会与该属性冲突。 小结： 你可以在 HTML
+  元素中使用自定义属性，但推荐使用 data-* 前缀的方式。 使用 data-*
+  属性可以确保自定义属性与标准属性的兼容性，且可以通过 JavaScript 的 dataset
+  轻松访问这些属性的值。
+</p>
