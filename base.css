@@ -142,9 +142,12 @@ h2 {
   margin-left: auto;
 }
 
-#ul-category-area {
+#ul-table-of-content {
   margin-right: 1rem;
-  min-height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  list-style-type: none;
 }
 
 #section-content-area {
