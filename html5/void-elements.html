@@ -1,0 +1,66 @@
+<h2>Void Elements</h2>
+<p>
+  In HTML, void elements are elements that do not have any content or "inner
+  HTML" by definition. They are elements that don't need a closing tag because
+  they are self-contained.
+</p>
+<p>Some common void elements include:</p>
+<ul>
+  <li>
+    <code>link</code>
+  </li>
+  <li>
+    <code>img</code>
+  </li>
+  <li>
+    <code>br</code>
+  </li>
+  <li>
+    <code>meta</code>
+  </li>
+  <li>
+    <code>input</code>
+  </li>
+</ul>
+<p>
+  Since these elements do not contain any child elements or content, they are
+  considered self-closing, and the browser automatically understands that they
+  are complete without the need for a closing tag.
+</p>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;img src="image.jpg" alt="Image"&gt;
+        &lt;br&gt;
+        &lt;input type="text" placeholder="Enter text"&gt;
+    </code>
+</pre>
+
+<h2>Non-Void Elements</h2>
+<p>
+  Non-void elements are elements that require a closing tag to define their
+  content or child elements. They can have both opening and closing tags, and
+  can contain other elements or text content.
+</p>
+<p>Some common non-void elements include:</p>
+<ul>
+  <li>
+    <code>div</code>
+  </li>
+  <li>
+    <code>p</code>
+  </li>
+  <li>
+    <code>span</code>
+  </li>
+  <li><code>h1</code> to <code>h6</code></li>
+  <li><code>ul</code> and <code>ol</code></li>
+  <li><code>script</code></li>
+</ul>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; &lt;!-- Closing tag is required, even if empty --&gt;
+
+    </code>
+</pre>

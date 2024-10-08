@@ -4,6 +4,7 @@
   树中，确保样式不会泄露到外部，外部的样式也不会影响到内部。
 </p>
 <pre>
+    <code class="language-javascript">
       const shadowHost = document.getElementById("myDiv")
       const shadowRoot = shadowHost.attachShadow({ mode: "open" })
 
@@ -15,6 +16,7 @@
             &lt;h1>Heading inside Shadow DOM&lt;/h1&gt;
             &lt;p>Paragraph inside Shadow DOM&lt;/p&gt;
         `
+    </code>
 </pre>
 <p>
   解释： Shadow DOM 是一种强大的方式，能够创建独立的 DOM
@@ -22,9 +24,10 @@
   中定义的样式只会作用于该 DOM 树内的元素，不会影响其他页面部分。
 </p>
 
+<pre>
+  <code class="language-javascript">const shadowRoot = shadowHost.attachShadow({ mode: 'open' });</code></pre>
 <p>
-  <code>const shadowRoot = shadowHost.attachShadow({ mode: 'open' });</code
-  >是用于创建 Shadow DOM 的代码，它为 shadowHost 元素（通常是一个 HTML
+  是用于创建 Shadow DOM 的代码，它为 shadowHost 元素（通常是一个 HTML
   元素）附加一个Shadow DOM 树，并将其与主文档的 DOM 树隔离开。
 </p>
 <p>详细解释：</p>
