@@ -152,12 +152,20 @@ main {
   }
 }
 
-#ul-table-of-content {
+main > nav {
+    max-width: fit-content;
+}
+main > nav > input {
+    width: 10rem;
+    margin-left: 2rem;
+}
+main > nav > ul {
   margin-right: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
   list-style-type: none;
+}
+main > nav > ul > li {
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 #section-content-area {
@@ -172,5 +180,5 @@ pre {
   padding: 0 1rem;
   max-width: 100%;
   box-sizing: border-box;
-  font-size: 0.9rem;    
+  font-size: 0.9rem;
 }

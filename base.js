@@ -25,7 +25,7 @@ btnToggleTheme.addEventListener("click", function () {
   }
 })
 
-const liPages = document.querySelectorAll("#ul-table-of-content li")
+const liPages = document.querySelectorAll("main nav ul li")
 const secContentArea = document.querySelector("#section-content-area")
 const lastAccessPage = localStorage.getItem("lastAccessPage")
 liPages.forEach((liPage) => {
@@ -43,6 +43,30 @@ liPages.forEach((liPage) => {
   if (lastAccessPage && liPage.children[0].href === lastAccessPage) {
     liPage.click()
   }
+})
+
+const inputSearch = document.querySelector("main > nav > input")
+inputSearch.addEventListener("input", function () {
+  const searchText = inputSearch.value.toLowerCase()
+  liPages.forEach((liPage) => {
+    const text = liPage.textContent.toLowerCase()
+    if (text.includes(searchText)) {
+      liPage.style.display = "block"
+    } else {
+      liPage.style.display = "none"
+    }
+  })
+})
+inputSearch.addEventListener("keydown", function (event) {
+  if (event.key == "Escape") {
+    inputSearch.value = ""
+  }
+    liPages.forEach((liPage) => { 
+        liPage.style.display = "block"
+    })
+})
+inputSearch.addEventListener("focus", function () {
+  inputSearch.select()
 })
 
 function loadCSS(url) {
