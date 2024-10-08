@@ -1,0 +1,114 @@
+<style>
+  #rem-html-article aside {
+    background-color: var(--color-bg-secondary);
+    font-style: italic;
+    font-size: 0.9em;
+  }
+</style>
+<h2>rem (root em)</h2>
+<article id="rem-html-article">
+  <p>
+    rem （root em）是一种相对单位。在 CSS 中，它表示根元素（即 html
+    元素）的字体大小，而不是 body 的字体大小。换句话说，1rem 等于 html 元素的
+    font-size 值。
+  </p>
+  <aside>em是排版术语，代表字母的高度，（尤其是字母M的高度）。</aside>
+  <p>
+    默认情况下，大多数浏览器会将 html 元素的 font-size 设为 16px。因此，1rem
+    默认等于 16px。
+  </p>
+  <p>
+    虽然 body 元素的 font-size 可以继承自 html 元素，但 rem 依赖于 html 元素的
+    font-size，而不是 body 的 font-size。即使 body 的 font-size
+    被修改，它不会影响 rem 的计算。
+  </p>
+  <p>
+    rem 单位的优势在于它可以根据根元素的字体大小进行缩放，这使得 rem
+    单位在响应式 设计中非常有用。通过修改 html 元素的
+    font-size，可以轻松地调整整个页面的字体 大小，从而实现页面的缩放。
+  </p>
+  <p>Example:</p>
+  <pre>
+<code class="language-css">
+/* Set the font size of the root element to 20px */
+html {
+    font-size: 20px;
+}
+
+/* Use rem units to set the font size of the body element */
+body {
+    font-size: 1rem; /* Equivalent to 20px */
+}
+
+/* Use rem units to set the font size of other elements */
+h1 {
+    font-size: 2rem; /* Equivalent to 40px */
+}
+
+p {
+    font-size: 1.5rem; /* Equivalent to 30px */
+}
+</code>
+</pre>
+  <p>
+    在上面的示例中，我们将 html 元素的 font-size 设置为 20px，然后使用 rem
+    单位设置 body、h1 和 p 元素的字体大小。由于 1rem 等于 20px，因此 body 的
+    font-size 为 1rem（20px），h1 的 font-size 为 2rem（40px），p 的 font-size
+    为 1.5rem（30px）。
+  </p>
+
+  <p>
+    通过使用 rem
+    单位，我们可以轻松地调整整个页面的字体大小，而不必逐个修改每个元素的
+    font-size。
+  </p>
+  <p>
+    注意：rem 单位是相对于根元素的字体大小计算的，因此在使用 rem 单位时，应该
+    谨慎设置 html 元素的 font-size，以确保整个页面的字体大小符合设计要求。
+  </p>
+  <h2>em vs. rem</h2>
+  <p>em 和 rem 都是相对单位，但它们之间有一些重要的区别：</p>
+  <ul>
+    <li>
+      <strong>em：</strong>
+      <p>
+        em 单位是相对于父元素的字体大小计算的。如果一个元素的 font-size 为 1em，
+        它将等于父元素的 font-size。如果父元素的 font-size 为 16px，那么 1em
+        将等于 16px。
+      </p>
+    </li>
+    <li>
+      <strong>rem：</strong>
+      <p>
+        rem 单位是相对于根元素的字体大小计算的。如果一个元素的 font-size 为
+        1rem， 它将等于根元素（html 元素）的 font-size。如果根元素的 font-size
+        为 16px， 那么 1rem 将等于 16px。
+      </p>
+    </li>
+  </ul>
+  <p>
+    由于 rem
+    单位是相对于根元素的字体大小计算的，因此在响应式设计中更为常用。通过
+    修改根元素的
+    font-size，可以轻松地调整整个页面的字体大小，而不必担心嵌套元素的 font-size
+    会受到影响。
+  </p>
+  <p>
+    与 em 单位相比，rem 单位更容易控制和维护，因为它不依赖于嵌套元素的字体大小。
+    通过使用 rem 单位，可以更好地实现页面的缩放和响应式设计。
+  </p>
+  <h2>总结</h2>
+  <p>
+    rem （root em）是一种相对单位，表示根元素的字体大小。默认情况下，1rem 等于
+    html 元素的 font-size，通常为 16px。rem
+    单位在响应式设计中非常有用，因为它可以
+    根据根元素的字体大小进行缩放，从而实现页面的缩放和响应式设计。
+  </p>
+  <h2>rem vs 字母高度</h2>
+  <p>
+    简单来说，rem与字母无关. rem 并不直接指代某个字母的高度或宽度。
+    字体大小的值（如 16px、20px
+    等）定义了字体的整体高度，但字母（或字符）本身的实际高度在不同字体中会有所不同。例如，大写字母
+    X 和小写字母 x 的高度可能不同，字符之间的占用空间（如 g 的下沉部分）也不同。
+  </p>
+</article>
