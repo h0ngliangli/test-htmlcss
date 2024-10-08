@@ -4,35 +4,38 @@
   的形式来定义自定义属性，这样可以确保它们是合法的，并且不会影响 HTML
   的解析或与标准属性发生冲突。 示例： html
 </p>
-<textarea class="textarea-code" readonly>
-<div data-shadow="true">This div has a custom data attribute</div>
-</textarea>
+<pre>
+<code class="language-html">
+  &lt;div data-shadow=&quot;true&quot;&gt;This div has a custom data attribute&lt;/div&gt;
+</code>
+</pre>
 <p>
   如何通过 JavaScript 访问 data-* 属性： 你可以通过 JavaScript 来访问自定义的
   data-* 属性。使用 dataset 对象可以轻松获取这些属性。 示例： html
 </p>
-<textarea class="textarea-code" readonly>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Data Attribute Example</title>
-  </head>
-  <body>
-    <div id="myDiv" data-shadow="true">
+<pre>
+<code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Custom Data Attribute Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;myDiv&quot; data-shadow=&quot;true&quot;&gt;
       This div has a custom data attribute
-    </div>
+    &lt;/div&gt;
 
-    <script>
-      const myDiv = document.getElementById("myDiv")
-      // 通过 dataset 获取自定义属性的值
+    &lt;script&gt;
+      const myDiv = document.getElementById(&quot;myDiv&quot;)
+      // &#x901A;&#x8FC7; dataset &#x83B7;&#x53D6;&#x81EA;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x7684;&#x503C;
       const shadowValue = myDiv.dataset.shadow
-      console.log(shadowValue) // 输出: "true"
-    </script>
-  </body>
-</html>
-</textarea>
+      console.log(shadowValue) // &#x8F93;&#x51FA;: &quot;true&quot;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>
   解释： data-shadow="true" 是一个自定义的数据属性，表示该div
   元素是否有某种阴影效果（true 表示有）。 在 JavaScript 中，使用
@@ -45,19 +48,22 @@
   前缀，开发者可以清楚地知道哪些属性是自定义的，不会与原生 HTML 属性混淆。
   非标准属性（无 data- 前缀） 尽管你可以直接添加任何自定义属性，例如
 </p>
-<textarea class="textarea-code" readonly>
- 
-  <div shadow="true">
-</textarea>
+<pre>
+<code class="language-html">
+  &lt;div shadow=&quot;true&quot;&gt;
+</code>
+</pre>
 <p>
   ，但这并不是标准做法，可能会导致潜在的兼容性问题或与未来的 HTML
   标准发生冲突。HTML5
   规范并没有阻止你添加非标准的属性，但为了避免不必要的麻烦，建议使用 data-*
   形式来添加自定义属性。 示例： html
 </p>
-<textarea class="textarea-code" readonly>
-    <div shadow="true">Non-standard custom attribute</div>
-</textarea>
+<pre>
+<code class="language-html">
+&lt;div shadow=&quot;true&quot;&gt;Non-standard custom attribute&lt;/div&gt;
+</code>
+</pre>
 <p>
   虽然这段代码不会立即引起问题，但如果 HTML 标准未来定义了 shadow
   作为一个合法属性，它可能会与该属性冲突。 小结： 你可以在 HTML

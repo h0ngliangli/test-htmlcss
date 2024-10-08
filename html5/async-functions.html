@@ -1,0 +1,79 @@
+<h2>Asynchronous functions</h2>
+<p>
+  In JavaScript, there are several asynchronous functions or APIs that allow for
+  non-blocking operations, enabling code to continue executing while waiting for
+  other tasks (like network requests, timers, or file operations) to complete.
+  Here are some of the common asynchronous functions.
+</p>
+<ol>
+  <li>
+    setTimeout() and setInteval()
+    <p>
+      <code>setTimeout()</code> and <code>setInterval()</code> are used to
+      execute a function after a specified delay or at regular intervals,
+      respectively. They are commonly used for animations, polling, and other
+      time-based operations.
+    </p>
+    <ul>
+      <li>
+        <code>setTimeout()</code> example:
+        <pre>
+            <code>
+                setTimeout(() => {
+                console.log("Hello, world!");
+                }, 1000);
+            </code>
+        </pre>
+      </li>
+      <li>
+        <code>setInterval()</code> example:
+        <pre>
+            <code>
+                setInterval(() => {
+                console.log("Hello, world!");
+                }, 1000);
+            </code>
+        </pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Promises
+    <p>
+      A Promise is a built-in JavaScript object representing the eventual
+      completion (or failure) of an asynchronous operation. Promises are widely
+      used in asynchronous programming to handle results when they are
+      available.
+    </p>
+    <p>Example:</p>
+    <pre>
+        <code>
+            const promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Promise resolved');
+                }, 1000);
+            });
+
+            promise.then(result => console.log(result)); // "Promise resolved" after 1 second
+        </code>
+    </pre>
+  </li>
+  <li>
+    Fetch API
+    <p>
+      The Fetch API provides an interface for fetching resources (like JSON
+      data, images, or files) across the network. It is a modern replacement for
+      XMLHttpRequest and is commonly used in web applications to make HTTP
+      requests.
+    </p>
+    <p>Example:</p>
+    <pre>
+            <code>
+                fetch('https://api.example.com/data')
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+            </code>
+        </pre>
+  </li>
+</ol>
