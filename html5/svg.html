@@ -1,0 +1,115 @@
+<h2>svg</h2>
+<p>
+  SVG(Scalable Vector Graphics) 是一种基于 XML
+  的图形格式，用于创建可缩放的矢量图形。
+</p>
+<p>SVG 可以通过以下几种方式使用：</p>
+<ul>
+  <li>作为 HTML 元素内联使用</li>
+  <li>作为 HTML 元素的背景</li>
+  <li>作为 CSS 的背景</li>
+  <li>作为图片使用</li>
+</ul>
+<p>SVG 的优点：</p>
+<ul>
+  <li>
+    无限缩放：SVG
+    是矢量图形，因此可以任意缩放而不会失去清晰度。无论在小屏幕上还是大屏幕上，它都能保持高质量的显示，适合高清显示设备（如
+    Retina 屏幕）。
+  </li>
+  <li>
+    文件体积小：对于简单或中等复杂的图形，SVG 文件的体积通常比同样尺寸的位图小。
+  </li>
+  <li>
+    可编辑和可搜索：由于 SVG 是基于 XML
+    的文本格式，图形可以直接在文本编辑器中编辑，无需图像处理软件。同时，SVG
+    内容可以被搜索引擎索引，提高网页的 SEO 性能。
+  </li>
+  <li>
+    可编程和动态交互：SVG 可以与 CSS 和 JavaScript
+    结合使用，允许动态样式变化、动画、事件绑定等。可以为 SVG
+    图形中的部分元素添加点击、悬停等交互效果。
+  </li>
+  <li>可压缩</li>
+  <li>
+    样式和动画支持：SVG 图形可以通过 CSS 进行样式化，并支持 SMIL（Synchronized
+    Multimedia Integration Language）或 CSS 动画 来为图形添加动画效果。
+  </li>
+</ul>
+<p>SVG 的缺点：</p>
+<ul>
+  <li>复杂图形的绘制和编辑相对困难</li>
+  <li>不适合处理大量的位图数据</li>
+  <li>不适合处理复杂的动画效果</li>
+</ul>
+<p>
+  总结，SVG
+  是非常强大的工具，尤其适用于制作矢量图形、图标和动画，但对于复杂、细节丰富的图片，位图格式（如
+  JPEG 或 PNG）可能更适合。
+</p>
+<p>用法：</p>
+<ol>
+  <li>
+    直接在 HTML 中嵌入svg元素。
+    <pre>
+      <code>
+        &lt;!-- &#x5D4C;&#x5165;&#x7B80;&#x5355;&#x7684; SVG &#x56FE;&#x5F62; --&gt;
+        &lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
+            &lt;!-- &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EA2;&#x8272;&#x7684;&#x5706; --&gt;
+            &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot; fill=&quot;red&quot; /&gt;
+        &lt;/svg&gt;
+      </code>
+    </pre>
+    <section>
+      <svg width="100" height="100">
+        <!-- 定义一个红色的圆 -->
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="red"
+        />
+      </svg>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <pre><code>&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;</code></pre>
+          定义一个 100x100 像素的画布。
+        </li>
+        <li>
+          circle：绘制一个圆，其中 cx 和 cy 表示圆心的坐标，r 表示半径，stroke
+          和 fill 分别设置边框和填充色。
+        </li>
+      </ul>
+    </section>
+  </li>
+  <li>
+    通过img元素加载外部 SVG 文件
+    <pre>
+      <code>
+        &lt;img src=&quot;circle.svg&quot; alt=&quot;Circle&quot; /&gt;
+      </code>
+    </pre>
+  </li>
+  <li>
+    使用object、iframe 或 embed 标签嵌入 SVG
+    <pre>
+      <code>
+        &lt;object data=&quot;circle.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;
+        &lt;iframe src=&quot;circle.svg&quot;&gt;&lt;/iframe&gt;
+        &lt;embed src=&quot;circle.svg&quot; type=&quot;image/svg+xml&quot; /&gt;
+      </code>
+    </pre>
+  </li>
+  <li>
+    使用 CSS 设置背景为 SVG
+    <pre>
+      <code>
+        &lt;div style=&quot;background-image: url('circle.svg');&quot;&gt;&lt;/div&gt;
+      </code>
+    </pre>
+  </li>
+</ol>
