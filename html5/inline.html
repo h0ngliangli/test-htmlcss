@@ -1,0 +1,124 @@
+<h2>Inline Elements</h2>
+<p>
+  Inline elements are elements that do not start on a new line and only take up
+  as much width as necessary. They are used within block-level elements or other
+  inline elements. Some common inline elements include:
+</p>
+<ul>
+  <li>
+    <code>span</code>
+  </li>
+  <li>
+    <code>a</code>
+  </li>
+  <li>
+    <code>strong</code>
+  </li>
+  <li>
+    <code>em</code>
+  </li>
+  <li>
+    <code>img</code>
+  </li>
+  <li>
+    <code>br</code>
+  </li>
+</ul>
+<p>
+  Inline elements can be nested within other inline elements or block-level
+  elements, but they cannot contain block-level elements.
+</p>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;p&gt;This is an example of a &lt;strong&gt;paragraph&lt;/strong&gt; with inline elements.&lt;/p&gt;
+    </code>
+</pre>
+<h2>Block-Level Elements</h2>
+<p>
+  Block-level elements are elements that start on a new line and take up the
+  full width available. They are used to create the structure of a webpage and
+  can contain other block-level elements, inline elements, or text content. Some
+  common block-level elements include:
+</p>
+<ul>
+  <li>
+    <code>div</code>
+  </li>
+  <li>
+    <code>p</code>
+  </li>
+  <li><code>pre</code></li>
+  <li><code>h1</code> to <code>h6</code></li>
+  <li><code>ul</code> and <code>ol</code></li>
+  <li>
+    <code>li</code>
+  </li>
+  <li>
+    <code>table</code>
+  </li>
+</ul>
+<p>
+  Block-level elements can be nested within other block-level elements, but they
+  cannot be nested within inline elements.
+</p>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;div&gt;
+            &lt;h1&gt;This is a heading&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph&lt;/p&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+<p>
+  One special case is the <code>p</code> element, which is a block-level element
+  that represents a paragraph of text. It automatically adds space before and
+  after the content, creating a separation between paragraphs. And it can't
+  contain block-level elements, only inline elements.
+</p>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;p&gt;This is a paragraph.
+            &lt;pre&gt;
+            This is preformatted text. &lt;!-- This is wrong but browsers can tolerate it. --&gt;
+            &lt;/pre&gt;
+        &lt;/p&gt;
+    </code>
+</pre>
+<h2>Inline-Block Elements</h2>
+<p>
+  Inline-block elements are a combination of inline and block-level elements.
+  They start on a new line like block-level elements, but they only take up as
+  much width as necessary like inline elements. They can contain other inline or
+  block-level elements.
+</p>
+<p>Some common inline-block elements include:</p>
+<ul>
+  <li>
+    <code>img</code>
+  </li>
+  <li>
+    <code>button</code>
+  </li>
+  <li>
+    <code>input</code>
+  </li>
+  <li>
+    <code>select</code>
+  </li>
+  <li>
+    <code>textarea</code>
+  </li>
+</ul>
+<p>
+  Inline-block elements can be used to create elements that need to be displayed
+  inline but also require block-level styling, such as buttons or form elements.
+</p>
+<p>Example:</p>
+<pre>
+    <code class="language-html">
+        &lt;button&gt;Click Me&lt;/button&gt;
+    </code>
+</pre>
