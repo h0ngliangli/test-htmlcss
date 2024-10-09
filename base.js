@@ -35,9 +35,12 @@ liPages.forEach((liPage) => {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        secContentArea.innerHTML = html
+        // 不用 innerHTML 是因為裡面有 script 標籤，
+        // 默认情况下浏览器不会执行其中的script标签
+        setInnerHTML(secContentArea, html)
         localStorage.setItem("lastAccessPage", url)
         hljs.highlightAll()
+        console.log(`Page loaded: ${url}`)
       })
   })
   if (lastAccessPage && liPage.children[0].href === lastAccessPage) {
@@ -61,9 +64,9 @@ inputSearch.addEventListener("keydown", function (event) {
   if (event.key == "Escape") {
     inputSearch.value = ""
   }
-    liPages.forEach((liPage) => { 
-        liPage.style.display = "block"
-    })
+  liPages.forEach((liPage) => {
+    liPage.style.display = "block"
+  })
 })
 inputSearch.addEventListener("focus", function () {
   inputSearch.select()
@@ -85,4 +88,21 @@ function unloadCSS(url) {
   } else {
     console.log(`CSS not found: ${url}`)
   }
+}
+// copied from: https://stackoverflow.com/questions/2592092/executing-script-elements-inserted-with-innerhtml
+function setInnerHTML(elm, html) {
+  elm.innerHTML = html
+
+  Array.from(elm.querySelectorAll("script")).forEach((oldScriptEl) => {
+    const newScriptEl = document.createElement("script")
+
+    Array.from(oldScriptEl.attributes).forEach((attr) => {
+      newScriptEl.setAttribute(attr.name, attr.value)
+    })
+
+    const scriptText = document.createTextNode(oldScriptEl.innerHTML)
+    newScriptEl.appendChild(scriptText)
+
+    oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl)
+  })
 }
