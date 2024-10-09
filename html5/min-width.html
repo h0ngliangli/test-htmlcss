@@ -1,0 +1,107 @@
+<h2>min-width</h2>
+<p>
+  min-width属性规定元素的最小宽度。无论外部环境如何变化，元素的宽度都不会比
+  min-width 设置的值更小。
+</p>
+<h3>min-width的作用</h3>
+<p>
+  保证元素的最小宽度，防止元素宽度过小导致内容溢出。
+  在响应式设计中，它可以与百分比宽度或 auto
+  宽度一起使用，确保元素不会因布局调整而太小，影响可读性或可用性。
+</p>
+<h3>min-width的常见用法</h3>
+<ol>
+  <li>
+    固定最小宽度
+    <pre>
+      <code>
+.box {
+    width: 50%;         /* 宽度为容器的一半 */
+    min-width: 200px;    /* 最小宽度为 200px */
+}
+      </code>
+    </pre>
+    <p>
+      在这个例子中，.box 元素的宽度默认是父元素的
+      50%。但是，如果父元素的宽度太小导致 .box 变得太窄，min-width: 200px;
+      会确保 .box 的最小宽度不会小于 200px。
+    </p>
+  </li>
+  <li>
+    防止内容被压缩
+    <pre>
+      <code>
+.text-box {
+    width: auto;
+    min-width: 300px;
+}
+      </code>
+    </pre>
+    <p>
+      在这个例子中，.text-box 元素的宽度是
+      auto，这意味着它将根据内容的大小自动调整。 但是，如果内容太少导致
+      .text-box 变得太窄，min-width: 300px; 会确保 .text-box 的最小宽度不会小于
+      300px。
+    </p>
+  </li>
+</ol>
+<h3>min-width常见值</h3>
+<ul>
+  <li>固定值（px、em、rem等）</li>
+  <li>百分比值（相对父元素）</li>
+  <li>
+    auto（默认值）：浏览器将根据内容的大小决定元素的最小宽度。
+    <ul>
+      <li>
+        确保文本不会被压缩得小于其所要求的大小。比如：较长的文本将保持其宽度。
+        如果继续缩小，文本将被截断到viewport之外。
+      </li>
+    </ul>
+  </li>
+</ul>
+<h3>min-width的继承性</h3>
+<p>min-width属性不会被继承。</p>
+<h3>min-width和其他宽度元素的交互</h3>
+<p>
+  min-width属性会覆盖width属性。如果元素的width属性值小于min-width属性值，元素的宽度将等于min-width属性值。
+</p>
+<p>max-width 和 min-width：这两个属性可以一起使用，限制元素的宽度范围。</p>
+<p>例如：</p>
+<pre>
+  <code>
+.box {
+    width: 50%;         /* 宽度为容器的一半 */
+    min-width: 200px;    /* 最小宽度为 200px */
+    max-width: 500px;    /* 最大宽度为 500px */
+}
+  </code>
+</pre>
+<p>
+  在这个例子中，.box 元素的宽度默认是父元素的
+  50%。但是，如果父元素的宽度太小导致 .box 变得太窄，min-width: 200px;
+  会确保 .box 的最小宽度不会小于 200px。 同时，max-width: 500px;
+  会确保 .box 的最大宽度不会大于 500px。
+</p>
+<h3>媒体查询中的min-width</h3>
+<p>
+  在响应式设计中，min-width属性通常与媒体查询一起使用，根据屏幕宽度调整元素的最小宽度。
+</p>
+<p>例如：</p>
+<pre>
+<code>
+@media screen and (min-width: 600px) {
+    .box {
+        min-width: 300px;
+    }
+}
+</code>
+</pre>
+<p>
+  在这个例子中，当屏幕宽度大于等于 600px 时，.box 元素的最小宽度为 300px。
+</p>
+<h3>总结</h3>
+<ul>
+    <li>min-width 确保元素不会被压缩到小于设定的最小宽度。</li>
+    <li>它可以与 width 和 max-width 配合使用，控制元素的宽度范围。</li>
+    <li>在响应式设计中，它可以确保在小屏幕设备上保持良好的布局和可读性。</li>
+</ul>
