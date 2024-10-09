@@ -153,15 +153,17 @@ main {
 }
 
 main > nav {
-    max-width: fit-content;
+  max-width: fit-content;
 }
 main > nav > input {
-    width: 10rem;
-    margin-left: 2rem;
+  width: 10rem;
+  margin-left: 2rem;
 }
 main > nav > ul {
   margin-right: 1rem;
   list-style-type: none;
+  max-height: 20rem;
+  overflow-y: auto;
 }
 main > nav > ul > li {
   margin-bottom: 0.5rem;

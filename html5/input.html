@@ -1,0 +1,253 @@
+<h2>input</h2>
+<p>
+  input 元素用于接收用户输入，常用于表单中。input
+  元素有多种类型，用于接收不同类型的输入，例如文本、密码、日期等。
+</p>
+<h3>基本用法</h3>
+<p>input 元素的基本用法如下：</p>
+<pre>
+    <code>
+&lt;input type="text" placeholder="Enter your name"&gt;
+    </code>
+</pre>
+<h3>常见类型</h3>
+<p>input 元素有多种类型，常见的类型如下：</p>
+<ol>
+  <li>
+    text: 默认类型，用于接收文本输入。
+    <pre><code>
+&lt;input type="text"&gt;
+    </code></pre>
+  </li>
+  <li>
+    password: 用于接收密码输入，输入内容会被隐藏。
+    <pre><code>
+&lt;input type="password"&gt;
+    </code></pre>
+  </li>
+  <li>
+    number: 用于接收数字输入。
+    <pre><code>
+&lt;input type="number"&gt;
+    </code></pre>
+  </li>
+  <li>
+    email: 用于接收邮箱地址输入。
+    <pre><code>
+&lt;input type="email"&gt;
+    </code></pre>
+  </li>
+  <li>
+    date: 用于接收日期输入。
+    <pre>
+            <code>
+&lt;input type="date"&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    checkbox: 用于接收复选框输入。
+    <pre>
+            <code>
+&lt;input type="checkbox"&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    radio: 用于接收单选框输入。
+    <pre>
+            <code>
+&lt;input type="radio"&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    file: 用于接收文件输入。
+    <pre>
+        <code>
+&lt;input type="file"&gt;
+        </code>
+    </pre>
+  </li>
+  <li>
+    submit: 用于提交表单。
+    <pre>
+        <code>
+&lt;input type="submit"&gt; &lt;!-- 或者 --&gt; &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        </code>
+    </pre>
+  </li>
+  <li>
+    reset: 用于重置表单。
+    <pre>
+        <code>
+&lt;input type="reset"&gt; &lt;!-- 或者 --&gt; &lt;button type="reset"&gt;Reset&lt;/button&gt;
+        </code>
+    </pre>
+  </li>
+  <li>
+    button: 用于触发自定义操作。
+    <pre>
+        <code>
+&lt;input type="button"&gt; &lt;!-- 或者 --&gt; &lt;button type="button"&gt;Click Me&lt;/button&gt;
+        </code>
+    </pre>
+  </li>
+</ol>
+
+<h3>事件</h3>
+<p>input元素支持以下事件：</p>
+<ol>
+  <li>
+    键盘事件
+    <ul>
+      <li><code>keydown</code>: 当用户按下任意键时触发。</li>
+      <li><code>keyup</code>: 当用户释放任意键时触发。</li>
+      <li>
+        keypress:
+        当用户按下按键且该按键会产生字符输入时触发（但不再推荐使用，keydown 和
+        keyup 可以更好地替代它）。
+      </li>
+    </ul>
+    <p>示例：</p>
+    <pre>
+            <code>
+inputElement.addEventListener('keydown', function(event) {
+    console.log('Key pressed: ', event.key);
+});
+            </code>
+        </pre>
+  </li>
+
+  <li>
+    鼠标事件
+    <ul>
+      <li><code>click</code>: 当用户点击 input 元素时触发。</li>
+      <li><code>dblclick</code>: 当用户双击 input 元素时触发。</li>
+      <li><code>mousedown</code>: 当用户按下鼠标按钮时触发。</li>
+      <li><code>mouseup</code>: 当用户释放鼠标按钮时触发。</li>
+      <li><code>mouseover</code>: 当鼠标指针移动到 input 元素上时触发。</li>
+      <li><code>mouseout</code>: 当鼠标指针移出 input 元素时触发。（会多次触发）。</li>
+      <li><code>mouseenter</code>: 当鼠标进入输入框时触发（仅触发一次）。</li>
+    </ul>
+  </li>
+  <li>
+    焦点事件
+    <ul>
+      <li><code>focus</code>: 当 input 元素获得焦点时触发。</li>
+      <li><code>blur</code>: 当 input 元素失去焦点时触发。</li>
+      <li><code>focusin</code>: 当 input 元素或其子元素获得焦点时触发。</li>
+      <li><code>focusout</code>: 当 input 元素或其子元素失去焦点时触发。</li>
+    </ul>
+  </li>
+  <li>
+    输入事件
+    <ul>
+      <li><code>input</code>: 当 input 元素的值发生变化时触发。</li>
+      <li><code>input</code>: 当 input 元素的值发生变化时触发。</li>
+      <li><code>change</code>: 当 input 元素的值发生变化并失去焦点时触发。</li>
+      <li><code>select</code>: 当用户在输入框中选择文本时触发。</li>
+    </ul>
+  </li>
+  <li>还有诸如剪切板、表单、拖放等事件，这次暂略。</li>
+</ol>
+<h3>属性</h3>
+<p>input元素支持以下属性：</p>
+<ol>
+  <li>
+    value: 设置或返回 input 元素的值。
+    <pre>
+            <code>
+inputElement.value = 'Hello, World!';
+console.log(inputElement.value); // 'Hello, World!'
+            </code>
+        </pre>
+  </li>
+  <li>
+    placeholder: 设置或返回 input 元素的占位符。
+    <pre>
+            <code>
+&lt;input type="text" placeholder="Enter your name"&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    disabled: 设置或返回 input 元素是否禁用。
+    <pre>
+            <code>
+inputElement.disabled = true;
+console.log(inputElement.disabled); // true
+            </code>
+        </pre>
+  </li>
+  <li>
+    readonly: 设置或返回 input 元素是否只读。
+    <pre>
+            <code>
+inputElement.readOnly = true;
+console.log(inputElement.readOnly); // true
+            </code>
+        </pre>
+  </li>
+  <li>
+    checked: 设置或返回 input 元素是否被选中（仅适用于 checkbox 和 radio 类型）。
+    <pre>
+            <code>
+inputElement.checked = true;
+console.log(inputElement.checked); // true
+            </code>
+        </pre>
+  </li>
+  <li>
+    autofocus: 设置或返回 input 元素是否自动获得焦点。
+    <pre>
+            <code>  
+&lt;input type="text" autofocus&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    required: 设置或返回 input 元素是否为必填项。
+    <pre>
+            <code>  
+&lt;input type="text" required&gt;
+            </code>
+        </pre>
+  </li>
+  <li>
+    pattern: 设置或返回 input 元素的验证规则。
+    <pre>
+            <code>  
+&lt;input type="text" pattern="[A-Za-z]{3}" title="Three letter word"&gt;
+            </code>
+        </pre>
+  </li>
+</ol>
+<h3>方法</h3>
+<p>input元素支持以下方法：</p>
+<ol>
+  <li>
+    focus(): 使 input 元素获得焦点。
+    <pre>
+            <code>
+inputElement.focus();
+            </code>
+        </pre>
+  </li>
+  <li>
+    blur(): 使 input 元素失去焦点。
+    <pre>
+            <code>
+inputElement.blur();
+            </code>
+        </pre>
+  </li>
+  <li>
+    select(): 选中 input 元素中的文本。
+    <pre>
+            <code>
+inputElement.select();
+            </code>
+        </pre>
+  </li>
+</ol>
