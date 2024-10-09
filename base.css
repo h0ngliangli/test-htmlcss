@@ -36,6 +36,7 @@
   --color-bg-disabled-active-quinary: #fff;
   --color-bg-disabled-disabled: #f0f0f0;
   --color-bg-disabled-disabled-secondary: #f8f8f8;
+  --color-shadow: #ccc;
 }
 
 .dark-mode {
@@ -76,6 +77,7 @@
   --color-bg-disabled-active-quinary: #222;
   --color-bg-disabled-disabled: #333;
   --color-bg-disabled-disabled-secondary: #2c2c2c;
+  --color-shadow: #292929;
 }
 
 body {
@@ -190,5 +192,5 @@ pre {
   max-width: 100%;
   box-sizing: border-box;
   font-size: 0.9rem;
-  box-shadow: 0 0 0 1px var(--color-bg-quaternary);
+  box-shadow: 7px 7px 7px var(--color-shadow);
 }
