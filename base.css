@@ -37,6 +37,7 @@
   --color-bg-disabled-disabled: #f0f0f0;
   --color-bg-disabled-disabled-secondary: #f8f8f8;
   --color-shadow: #ccc;
+  --color-header: #c0cbcc;
 }
 
 .dark-mode {
@@ -78,6 +79,7 @@
   --color-bg-disabled-disabled: #333;
   --color-bg-disabled-disabled-secondary: #2c2c2c;
   --color-shadow: #292929;
+  --color-header: #4a4e4f;
 }
 
 body {
@@ -117,13 +119,8 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--color-secondary);
-  text-decoration: underline;
-}
-
 header {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-header);
   padding: 0.5rem;
   margin-bottom: 2rem;
   display: flex;
