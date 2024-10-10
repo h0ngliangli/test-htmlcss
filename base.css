@@ -173,7 +173,7 @@ main > nav > input {
 main > nav > ul {
   margin-right: 1rem;
   list-style-type: none;
-  max-height: 20rem;
+  max-height: 40rem;
   overflow-y: auto;
 }
 main > nav > ul > li {
