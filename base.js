@@ -72,6 +72,13 @@ inputSearch.addEventListener("focus", function () {
   inputSearch.select()
 })
 
+document.addEventListener("keydown", function (event) {
+  if (event.key == "/") {
+    inputSearch.focus()
+    event.preventDefault()
+  }
+})
+
 function loadCSS(url) {
   const link = document.createElement("link")
   link.rel = "stylesheet"

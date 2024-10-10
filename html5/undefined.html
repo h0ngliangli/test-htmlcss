@@ -1,0 +1,99 @@
+<h2>JavaScript 中 <code>undefined</code> 的用法</h2>
+<p>
+  在 JavaScript 中，<code>undefined</code>
+  是一个基本数据类型，用来表示一个变量已经声明但尚未赋值，或者对象的某个属性不存在。以下是
+  <code>undefined</code> 的几种常见用法和场景：
+</p>
+
+<h3>1. 变量未赋值时的 <code>undefined</code></h3>
+<p>当一个变量声明后未赋值，它的默认值就是 <code>undefined</code>。</p>
+<pre><code>let a;
+console.log(a); // 输出: undefined
+    </code></pre>
+
+<h3>2. 使用 <code>typeof</code> 检测是否为 <code>undefined</code></h3>
+<p>
+  可以使用 <code>typeof</code> 操作符来检查一个变量是否为
+  <code>undefined</code>。这种方法比较安全，即使变量未声明也不会报错。
+</p>
+<pre><code>let b;
+console.log(typeof b === 'undefined'); // 输出: true
+    </code></pre>
+<p>
+  如果变量未声明，<code>typeof</code> 同样不会抛出错误，而是返回
+  <code>'undefined'</code>：
+</p>
+<pre><code>console.log(typeof c === 'undefined'); // 输出: true
+    </code></pre>
+
+<h3>3. 函数没有返回值时返回 <code>undefined</code></h3>
+<p>
+  在 JavaScript 中，如果一个函数没有显式地使用
+  <code>return</code> 语句返回值，那么该函数默认返回 <code>undefined</code>。
+</p>
+<pre><code>function myFunction() {}
+console.log(myFunction()); // 输出: undefined
+    </code></pre>
+
+<h3>4. 对象属性不存在时的 <code>undefined</code></h3>
+<p>当你访问一个对象中不存在的属性时，会返回 <code>undefined</code>。</p>
+<pre><code>let obj = { name: 'Alice' };
+console.log(obj.age); // 输出: undefined
+    </code></pre>
+
+<h3>5. 数组中不存在的索引返回 <code>undefined</code></h3>
+<p>访问数组中不存在的元素，也会返回 <code>undefined</code>。</p>
+<pre><code>let arr = [1, 2, 3];
+console.log(arr[5]); // 输出: undefined
+    </code></pre>
+
+<h3>6. 函数参数未传递时为 <code>undefined</code></h3>
+<p>
+  在调用函数时，如果某个参数没有传递，那么该参数的值为 <code>undefined</code>。
+</p>
+<pre><code>function greet(name) {
+  console.log(name); // 如果未传入 name，输出: undefined
+}
+
+greet(); // 输出: undefined
+    </code></pre>
+
+<h3>7. 显式赋值 <code>undefined</code></h3>
+<p>
+  你可以显式地将变量或对象属性赋值为
+  <code>undefined</code>，虽然通常不推荐这样做，因为
+  <code>null</code> 更适合表示 "空值"。
+</p>
+<pre><code>let x = undefined;
+console.log(x); // 输出: undefined
+    </code></pre>
+
+<h3>8. 判断是否为 <code>undefined</code></h3>
+<p>
+  可以通过严格等于（<code>===</code>）判断某个变量是否为
+  <code>undefined</code>。
+</p>
+<pre><code>let y;
+if (y === undefined) {
+  console.log('y 是 undefined');
+}
+    </code></pre>
+
+<h3>9. 默认参数</h3>
+<p>
+  当函数的某些参数可能没有传递时，可以设置默认值来避免 <code>undefined</code>。
+</p>
+<pre><code>function sayHello(name = 'Guest') {
+  console.log(`Hello, ${name}!`);
+}
+
+sayHello(); // 输出: Hello, Guest!
+    </code></pre>
+
+<h3>小结</h3>
+<p>
+  <code>undefined</code> 主要用于表示变量或属性未赋值的状态，它与
+  <code>null</code> 是不同的概念，<code>null</code>
+  通常用于表示空值或不存在的对象，而
+  <code>undefined</code> 表示“未定义”或“缺失”。
+</p>

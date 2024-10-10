@@ -19,7 +19,11 @@
     left: 0px;
     width: 100px;
     height: 50px;
-    background-color: #797676;
+    background-color: #99ab3f;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 <h2>position: absolute</h2>
@@ -124,9 +128,12 @@
 }
 </code></pre>
 <div class="absolute-html-absolute-box2">相对视口</div>
-<script>
-  const div = document.querySelector(".absolute-html-absolute-box2")
+
+<script type="module">
+    // 这里使用module的目的是让script中的变量不会影响到全局变量。
   const changePosition = () => {
+    const div = document.querySelector(".absolute-html-absolute-box2")
+    if (div === null) return
     const candidateTopLefts = [
       { top: 0, left: 0 },
       { top: 0, left: window.innerWidth - div.offsetWidth },
@@ -146,7 +153,10 @@
     left += window.scrollX
     div.style.top = `${top}px`
     div.style.left = `${left}px`
-    setTimeout(changePosition, 3000)
+    setTimeout(()=>{
+        if (typeof changePosition === 'function') {
+            changePosition()
+        }}, 3000)
   }
   changePosition()
 </script>

@@ -1,0 +1,85 @@
+<h2>
+  在script中定义的变量的可见范围是不是只存在与这个script中？也就是说，两个script元素中相同的变量名的变量是不同的变量？
+</h2>
+<h3>
+  情况 1：默认 <code>&lt;script&gt;</code> 标签中的变量（没有
+  <code>type="module"</code>）
+</h3>
+<p>
+  当不使用 <code>type="module"</code>，在多个
+  <code>&lt;script&gt;</code>
+  标签中声明的变量都共享同一个全局作用域。也就是说，即使变量是在不同的
+  <code>&lt;script&gt;</code> 元素中声明的，它们仍然属于全局范围，后面的
+  <code>&lt;script&gt;</code> 会覆盖之前的同名变量。
+</p>
+
+<pre><code>&lt;script&gt;
+  var message = "Hello from script 1";
+  console.log(message); // 输出: Hello from script 1
+&lt;/script&gt;
+
+&lt;script&gt;
+  var message = "Hello from script 2";
+  console.log(message); // 输出: Hello from script 2
+&lt;/script&gt;
+    </code></pre>
+
+<p>
+  在这个例子中，第二个 <code>&lt;script&gt;</code> 会覆盖第一个
+  <code>&lt;script&gt;</code> 中声明的
+  <code>message</code> 变量，因为它们都位于同一个全局作用域中。
+</p>
+
+<p>
+  <strong>结论</strong>：多个非模块化
+  <code>&lt;script&gt;</code>
+  标签中，变量共享同一作用域（全局作用域），同名变量会相互覆盖。
+</p>
+
+<h3>
+  情况 2：使用 <code>type="module"</code> 的 <code>&lt;script&gt;</code> 标签
+</h3>
+<p>
+  如果使用了 <code>type="module"</code> 属性，则每个
+  <code>&lt;script&gt;</code> 标签都会在它自己的模块作用域中执行。这意味着不同的
+  <code>&lt;script&gt;</code>
+  标签之间的变量不会相互影响，即使变量名称相同，它们也是彼此独立的。
+</p>
+
+<pre><code>&lt;script type="module"&gt;
+  var message = "Hello from module script 1";
+  console.log(message); // 输出: Hello from module script 1
+&lt;/script&gt;
+
+&lt;script type="module"&gt;
+  var message = "Hello from module script 2";
+  console.log(message); // 输出: Hello from module script 2
+&lt;/script&gt;
+    </code></pre>
+
+<p>
+  在这个例子中，尽管 <code>message</code> 变量在两个不同的
+  <code>&lt;script type="module"&gt;</code>
+  标签中声明，但它们是互不干扰的，因为每个
+  <code>&lt;script type="module"&gt;</code> 均有独立的作用域。
+</p>
+
+<p>
+  <strong>结论</strong>：如果使用了 <code>type="module"</code>，则每个
+  <code>&lt;script&gt;</code> 标签都有自己的作用域，变量不会相互覆盖。
+</p>
+
+<h3>小结</h3>
+<ul>
+  <li>
+    <strong>没有 <code>type="module"</code></strong> 的
+    <code>&lt;script&gt;</code> 标签共享全局作用域，因此两个
+    <code>&lt;script&gt;</code> 元素中的同名变量是相同的变量，后者会覆盖前者。
+  </li>
+  <li>
+    <strong>有 <code>type="module"</code></strong> 的
+    <code>&lt;script&gt;</code> 标签在模块作用域中运行，因此每个
+    <code>&lt;script&gt;</code> 的变量是独立的，两个
+    <code>&lt;script&gt;</code> 中的同名变量不会相互影响。
+  </li>
+</ul>
