@@ -180,7 +180,16 @@ main > nav > ul > li {
   margin-bottom: 0.5rem;
   white-space: nowrap;
 }
-
+main > nav > ul > li:hover {
+  color: var(--color-secondary);
+  border-radius: 5px;
+  background-color: var(--color-bg-hover);
+  transition: background-color 0.2s;
+}
+main > nav > ul > li > a {
+  text-decoration: none;
+  padding: 0.5rem;
+}
 #section-content-area {
   padding: 0 1rem; /* 两边留白，易于阅读 */
   min-width: 0;
