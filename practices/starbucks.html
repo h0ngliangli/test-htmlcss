@@ -1,0 +1,304 @@
+<style>
+  #section-starbucks {
+    --color-title: rgb(218, 239, 142);
+    --color-text: rgb(240, 238, 238);
+    --color-header: rgb(0, 98, 65);
+    --color-darkgreen: rgb(30, 57, 50);
+    --color-footer: rgb(243, 244, 240);
+    width: 640px;
+    font-family: "SoDo Sans", Avenir, "Roboto", Helvetica, Arial, sans-serif;
+    color: var(--color-text);
+  }
+
+  #section-starbucks header {
+    background-color: var(--color-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  #section-starbucks a {
+    /* 使用text-decoration-thickness修改下划线的line weight not supported in Firefox */
+    /* text-decoration: underline;
+    text-decoration-thickness: 2px; */
+    border-bottom: 1px solid rgb(240, 238, 238);
+  }
+
+  #section-starbucks h2 {
+    border-bottom: initial;
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--color-title);
+  }
+
+  #section-starbucks h3 {
+    border-bottom: initial;
+    text-align: center;
+    color: var(--color-title);
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  #section-startbucks-1,
+  #section-startbucks-2 {
+    background-color: var(--color-darkgreen);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #section-startbucks-2 {
+    background-color: var(--color-header);
+    align-items: center;
+  }
+
+  #section-starbucks-title {
+    
+  }
+  #section-starbucks-title sup {
+    font-size: 0.6rem;
+  }
+  #section-starbucks-subtitle {
+    color: var(--color-title);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .section-starbucks-big-image {
+    width: 620px;
+    height: auto;
+  }
+
+  .section-starbucks-small-image {
+    width: 168px;
+    height: auto;
+  }
+  .section-starbucks-big-text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin: auto 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .section-starbucks-small-text {
+    width: 80%;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin: auto 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .section-starbucks-round-button {
+    background-color: var(--color-title);
+    color: var(--color-darkgreen);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 2rem;
+  }
+
+  .section-starbucks-sale {
+    display: flex;
+    width: 80%;
+    gap: 10%;
+    align-items: center;
+    text-align: right;
+  }
+
+  #section-starbucks-link {
+    display: flex;
+    background-color: rgb(212, 233, 226);
+    justify-content: center;
+    align-items: center;
+    color: var(--color-darkgreen);
+    padding: 1rem 1rem;
+  }
+  #section-starbucks-link img {
+    width: 42px;
+    height: auto;
+    /* margin-right: 0.5rem; */
+  }
+  #section-starbucks-link > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    /* border: 1px solid var(--color-darkgreen); */
+    border-right: 2px solid;
+    padding: 0 9%;
+  }
+  #section-starbucks-link-div-end {
+    border-right-style: none;
+  }
+  #section-starbucks-link a {
+    color: var(--color-darkgreen);
+    border-bottom: initial; /* 取消之前的设定 */
+  }
+</style>
+
+<h2>这里例子是模仿一封starbucks邮件的效果</h2>
+<section id="section-starbucks">
+  <header>
+    <span>GET THE BEST OF EVERYTHING IN <a href="#">THE APP</a></span>
+  </header>
+  <section id="section-startbucks-1">
+    <h2 id="section-starbucks-title">STARBUCKS<sup>©</sup></h2>
+    <h3 id="section-starbucks-subtitle">PRESENTS</h3>
+    <div>
+      <img
+        src="practices/starbucks/going-for-coffee.png"
+        alt="Going for coffee"
+        class="section-starbucks-big-image"
+      />
+    </div>
+    <h2>The ultimate coffee adventure awaits</h2>
+    <p class="section-starbucks-big-text">
+      Authentic moments of connection and a shared love of coffee sparked a
+      friendship between a Starbucks barista and a customer. Now they’re off to
+      Colombia and Milan to discover the story behind Starbucks® Milano Duetto
+      roasts—deepening their connection with coffee and each other.
+    </p>
+    <section class="section-starbucks-round-button">Watch Now</section>
+  </section>
+  <section id="section-startbucks-2">
+    <div>
+      <img
+        src="practices/starbucks/franky-tamara.png"
+        alt="franky and tamara"
+        class="section-starbucks-big-image"
+      />
+    </div>
+    <h2>
+      Discover the bold flavors of the new Starbucks® Milano Duetto coffees
+    </h2>
+    <p class="section-starbucks-small-text">
+      It’s one coffee blend expressed through two distinct roasts. Together they
+      highlight the duality between tradition and innovation.
+    </p>
+    <section class="section-starbucks-sale">
+      <div>
+        <h3>Starbucks® Milano Sole</h3>
+        <p>
+          A light roast with notes of creamy vanilla custard, sweet pomegranate
+          and nutmeg.
+        </p>
+        <p><a href="#">Order Now</a></p>
+      </div>
+      <div>
+        <img
+          src="practices/starbucks/milano-sole.png"
+          alt="milano sole"
+          class="section-starbucks-small-image"
+        />
+      </div>
+    </section>
+    <section class="section-starbucks-sale">
+      <div style="text-align: right">
+        <img
+          src="practices/starbucks/milano-luna.png"
+          alt="milano luna"
+          class="section-starbucks-small-image"
+        />
+      </div>
+      <div style="text-align: left">
+        <h3>Starbucks® Milano Sole</h3>
+        <p>
+          A light roast with notes of creamy vanilla custard, sweet pomegranate
+          and nutmeg.
+        </p>
+        <p><a href="#">Order Now</a></p>
+      </div>
+    </section>
+    <div>
+      <img
+        src="practices/starbucks/mug.png"
+        alt="brewing coffee"
+        class="section-starbucks-big-image"
+      />
+    </div>
+    <h2>Now brewing at a <br />Starbucks near you</h2>
+    <p class="section-starbucks-big-text">
+      We invite you to taste Starbucks® Milano Sole and Starbucks® Milano Luna
+      side by side to celebrate the contrast of light and dark roasts. Order
+      them freshly brewed at participating stores for a limited time.
+    </p>
+    <section class="section-starbucks-round-button">Order Now</section>
+  </section>
+  <section id="section-starbucks-link">
+    <div>
+      <img src="practices/starbucks/app.png" alt="app" />
+      <a href="#">APP</a>
+    </div>
+    <div>
+      <img src="practices/starbucks/order.png" alt="app" />
+      <a href="#">ORDER</a>
+    </div>
+    <div>
+      <img src="practices/starbucks/offer.png" alt="app" />
+      <a href="#">OFFERS</a>
+    </div>
+    <div class="section-starbucks-link-div-end">
+      <img src="practices/starbucks/reward.png" alt="app" />
+      <a href="#">REWARDS</a>
+    </div>
+
+  </section>
+  <style>
+    #section-starbucks-footer {
+        background-color: var(--color-footer);
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        color: var(--color-darkgreen);
+        text-align: center;
+
+    }
+    #section-starbucks-footer-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem auto;
+    }
+    #section-starbucks-footer-link img {
+        width: 42px;
+        height: auto;
+    }
+
+    #section-starbucks-footer p {
+        margin: 0.5rem 4rem;
+    }
+  </style>
+  <footer id="section-starbucks-footer">
+    <section id="section-starbucks-footer-link">
+      <img src="practices/starbucks/instagram.png" alt="instagram" />
+      <img src="practices/starbucks/tiktok.png" alt="tiktok" />
+      <img src="practices/starbucks/facebook.png" alt="facebook" />
+      <img src="practices/starbucks/x.png" alt="x" />
+    </section>
+    <p>Ref: 25-2-ANO-5-0-0-EM-SR-NA-US</p>
+    <p>
+      We’re contacting you because you are a member of the Starbucks® Rewards
+      loyalty program. This email was sent to woodyli82@gmail.com. Unsubscribe.
+    </p>
+    <p>Questions? Contact us here.</p>
+    <p>
+      P.O. Box 549, Fort Smith, AR 72902. <br />
+      © 2024 Starbucks Corporation.
+    </p>
+    <p>Starbucks Card Terms of Use</p>
+    <p>Starbucks® Rewards Terms of Use</p>
+    <p>Privacy Statement</p>
+    <img src="practices/starbucks/logo.png" alt="starbucks logo" />
+  </footer>
+</section>
