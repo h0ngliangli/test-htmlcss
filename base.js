@@ -77,6 +77,27 @@ document.addEventListener("keydown", function (event) {
     inputSearch.focus()
     event.preventDefault()
   }
+  if (event.key == "Tab") {
+    divFoldNav.click()
+    event.preventDefault()
+  }
+})
+
+const nav = document.querySelector("main > nav")
+console.log(nav.offsetWidth)
+// set --nav-width
+nav.style.setProperty("--nav-width", `${nav.offsetWidth}px`)
+const divFoldNav = document.getElementById("div-fold-nav")
+document.getElementById("div-fold-nav").addEventListener("click", function () {
+  if (nav.classList.contains("fold")) {
+    divFoldNav.textContent = ">"
+    nav.classList.remove("fold")
+    nav.classList.add("unfold")
+  } else {
+    divFoldNav.textContent = "<"
+    nav.classList.remove("unfold")
+    nav.classList.add("fold")
+  }
 })
 
 function loadCSS(url) {
