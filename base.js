@@ -86,7 +86,7 @@ document.addEventListener("keydown", function (event) {
 const nav = document.querySelector("main > nav")
 console.log(nav.offsetWidth)
 // set --nav-width
-nav.style.setProperty("--nav-width", `${nav.offsetWidth}px`)
+// nav.style.setProperty("--nav-width", `${nav.offsetWidth}px`)
 const divFoldNav = document.getElementById("div-fold-nav")
 document.getElementById("div-fold-nav").addEventListener("click", function () {
   if (nav.classList.contains("fold")) {

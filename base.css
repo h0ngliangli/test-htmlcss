@@ -38,6 +38,7 @@
   --color-bg-disabled-disabled-secondary: #f8f8f8;
   --color-shadow: #ccc;
   --color-header: #c0cbcc;
+  --nav-width: 240px;
 }
 
 .dark-mode {
@@ -162,7 +163,6 @@ main {
 
 .fold {
   width: 0;
-  
 }
 
 .unfold {
@@ -174,12 +174,13 @@ main > nav {
   align-items: center;
   overflow: hidden;
   transition: width 0.5s;
+  flex-shrink: 0; /* 不缩小 */
 }
 
 main > nav input {
   width: 10rem;
   /*两边留白，防止hr贴的太紧*/
-  margin: 0 2rem; 
+  margin: 0 2rem;
 }
 main > nav > ul {
   margin-right: 1rem;
