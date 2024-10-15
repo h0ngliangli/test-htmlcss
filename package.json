@@ -1,0 +1,14 @@
+{
+  "name": "test-htmlcss",
+  "version": "1.0.0",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build-cordova": "build/cordova.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
