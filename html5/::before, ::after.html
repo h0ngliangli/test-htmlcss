@@ -1,0 +1,62 @@
+<h2>::before 和 ::after 的含义</h2>
+<p>
+  在 CSS 中，<code>::before</code> 和
+  <code>::after</code> 是伪元素，它们用于在元素的内容前后插入内容。
+</p>
+<p>
+  <code>::before</code> 用于在元素内容的前面插入内容，而
+  <code>::after</code> 用于在元素内容的后面插入内容。
+</p>
+<p>伪元素是一种不在 DOM 中存在的元素，它们是通过 CSS 生成的。</p>
+<h2>::before 和 ::after 的应用场景</h2>
+<p>
+  <code>::before</code> 和
+  <code>::after</code>
+  可以用于在元素的内容前后插入内容，常用于添加装饰性的内容。
+</p>
+<p>
+  例如，你可以使用 <code>::before</code> 和
+  <code>::after</code> 为元素添加引号、图标、背景等。
+</p>
+<h2>::before 和 ::after 的语法</h2>
+<p><code>::before</code> 和 <code>::after</code> 的语法如下：</p>
+<pre><code>
+selector::before {
+  content: "content";
+}
+</code>
+</pre>
+<p>
+  <code>selector</code> 是 CSS 选择器，<code>content</code> 是要插入的内容。
+</p>
+<p>你可以在 <code>content</code> 中插入文本、图片、图标等。</p>
+<h2>::before 和 ::after 的示例</h2>
+<h3>示例 1：为元素添加引号</h3>
+<p>你可以使用 <code>::before</code> 和 <code>::after</code> 为元素添加引号。</p>
+<p>例如，你可以为段落添加引号：</p>
+<pre><code>
+p::before {
+  content: "“";
+}
+</code>
+</pre>
+<p>这样，每个段落的内容前面都会添加一个左引号。</p>
+<h3>示例 2：为元素添加图标</h3>
+<p>你可以使用 <code>::before</code> 和 <code>::after</code> 为元素添加图标。</p>
+<p>例如，你可以为按钮添加一个下载图标：</p>
+<pre><code>
+button::after {
+  content: url("download.png");
+}
+</code>
+</pre>
+<p>这样，每个按钮的内容后面都会添加一个下载图标。</p>
+<h2>总结</h2>
+<p>
+  在 CSS 中，<code>::before</code> 和
+  <code>::after</code> 是伪元素，它们用于在元素的内容前后插入内容。
+</p>
+<p>
+  你可以使用 <code>::before</code> 和
+  <code>::after</code> 为元素添加装饰性的内容，如引号、图标、背景等。
+</p>
