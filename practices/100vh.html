@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100vh</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* border-box使得padding不会撑大元素 
+            如果你不加这一行，你会发现header的宽度会变成设定值+padding的宽度*/
+        box-sizing: border-box;
+      }
+      html {
+        /* 如果不设定html的background-color, body的background-color会扩展到全部视口。*/
+        background-color: aliceblue;
+      }
+      body {
+        background-color: #eee;
+        /* 0使得上下无空隙， auto使得body居中*/
+        margin: 0 auto;
+        padding: 0;
+        width: 720px;
+        /* 100vh - 5px */
+        /* height: calc(100vh - 5px); */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        width: 100%;
+        background-color: #ddd;
+        /* padding中的auto是没有作用的，这一点我并不能十分接受，但是若
+            要让内容元素（text）居中，应该使用text-align*/
+        /* padding: 0.5rem auto; */
+        text-align: center;
+        padding: 0.5rem;
+        flex-shrink: 0;
+      }
+      main {
+        margin-top: 10rem;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        flex-grow: 1;
+        overflow: auto;
+      }
+      footer {
+        flex-shrink: 0;
+        width: 100%;
+        background-color: #ddd;
+        text-align: center;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <main>
+      <p>
+        我在这里要实现的是一个高度为100vh的页面，但是我发现当我设置body的高度为100vh时，
+        页面会出现滚动条，这是因为浏览器的默认样式中有一个margin，这个margin会使得body的高度超过100vh，
+        所以我需要将body的margin设置为0，这样就可以实现一个高度为100vh的页面了。
+      </p>
+      <p>好，接下来我要添加一段长文本，看main是否会超出父元素的边界？</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id
+        consectetur ullam voluptas voluptatibus esse, quasi autem, a quidem
+        dolorum deserunt doloribus veritatis vero. Optio nisi similique natus
+        iusto sint. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Fuga maiores, reprehenderit maxime voluptates natus nemo omnis non quas
+        dignissimos debitis reiciendis rem quo, voluptas iure laboriosam
+        temporibus. Dolores, quae reiciendis.
+      </p>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>
