@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        width: 500px;
+        height: 500px;
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+      }
+      #child {
+        background-color: red;
+        flex-grow: 1;
+        line-height: 2;
+        /* 可以使用max-height: 100%来限制child边界，
+        但是文本内容还是会超出边界。 */
+        /* max-height: 100%; */
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio harum
+        delectus a? Modi, tempora consectetur distinctio aliquid et numquam.
+        Fuga nisi eum maiores laudantium nesciunt repellendus officiis
+        consequatur officia vel?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio harum
+        delectus a? Modi, tempora consectetur distinctio aliquid et numquam.
+        Fuga nisi eum maiores laudantium nesciunt repellendus officiis
+        consequatur officia vel?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio harum
+        delectus a? Modi, tempora consectetur distinctio aliquid et numquam.
+        Fuga nisi eum maiores laudantium nesciunt repellendus officiis
+        consequatur officia vel?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio harum
+        delectus a? Modi, tempora consectetur distinctio aliquid et numquam.
+        Fuga nisi eum maiores laudantium nesciunt repellendus officiis
+        consequatur officia vel?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio harum
+        delectus a? Modi, tempora consectetur distinctio aliquid et numquam.
+        Fuga nisi eum maiores laudantium nesciunt repellendus officiis
+        consequatur officia vel?
+
+      </div>
+    </div>
+  </body>
+</html>
