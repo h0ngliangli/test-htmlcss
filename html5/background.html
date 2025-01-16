@@ -1,0 +1,297 @@
+<p>
+  在CSS中，background-*相关的属性用于控制元素的背景样式，包括color，image，size，repeat，position等。
+  下面是相关属性的详细介绍：
+</p>
+
+<h2>background（简写属性）</h2>
+<p>background是一个shorthand，和border一样，可以同时设置多个属性。</p>
+<p>语法：</p>
+<pre><code>
+background: color image position / size repeat origin clip attachment;
+</code></pre>
+<p>代码示例：</p>
+<pre><code>
+div {
+  background: #f0f0f0 url('background.jpg') no-repeat center / cover fixed;
+}
+</code></pre>
+<ul>
+  <li><code>#f0f0f0</code> 背景色</li>
+  <li><code>url('background.jpg')</code> 背景图片</li>
+  <li><code>no-repeat</code> 背景图片不重复</li>
+  <li><code>center</code> 背景图片居中</li>
+  <li><code>cover</code> 背景图片尽可能大地覆盖整个元素</li>
+  <li><code>fixed</code> 背景图片固定</li>
+</ul>
+<h2>background-color(背景色)</h2>
+<p>默认值：transparent</p>
+<p>可用值：</p>
+<ul>
+  <li>颜色名称：red blue, green ...</li>
+  <li>十六进制：#ff0000, #00ff00, #0000ff ...</li>
+  <li>rgb：rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255) ...</li>
+  <li>
+    rgba：rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5) ...
+  </li>
+  <li>hsl：hsl(0, 100% 50%)</li>
+</ul>
+
+<h2>background-image(背景图片)</h2>
+<p>默认值：none</p>
+<p>可用值：</p>
+<ul>
+  <li>url('path/to/image.jpg')</li>
+  <li>linear-gradient()</li>
+  <li>radial-gradient()</li>
+  <li>repeating-linear-gradient()</li>
+  <li>repeating-radial-gradient()</li>
+</ul>
+<p>示例：</p>
+<pre><code>
+div {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to right, red, blue);
+}
+</code></pre>
+<div
+  style="
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to right, red, blue);
+  "
+></div>
+
+<h2>background-size(背景图片尺寸)</h2>
+<p>默认值：auto，原始大小</p>
+<p>可用值：</p>
+<ul>
+  <li>auto，原始大小</li>
+  <li>cover，图片保持比例填充整个容器，可能会裁剪</li>
+  <li>contain，保持缩放比例，完全显示，但可能不会填满</li>
+  <li>100px 100px，具体指定宽高</li>
+  <li>50% 50%</li>
+</ul>
+<p>cover示例：</p>
+<pre><code>
+div {
+  width: 100px;
+  height: 100px;
+  background-image: url('/img/ocean-long-bg.jpg');
+  background-size: cover;
+}
+</code></pre>
+<div
+  style="
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-size: cover;
+  "
+></div>
+<p>contain示例：</p>
+<pre><code>
+div {
+  width: 100px;
+  height: 100px;
+  background-image: url('/img/ocean-long-bg.jpg');
+  background-size: contain;
+}
+</code></pre>
+<div
+  style="
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-size: contain;
+  "
+></div>
+<p>px示例</p>
+<pre><code>
+div {
+  width: 100px;
+  height: 100px;
+  background-image: url('/img/ocean-long-bg.jpg');
+  background-size: 50px 50px;
+}
+</code></pre>
+<div
+  style="
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-size: 50px 50px;
+  "
+></div>
+
+<h2>background-position(背景图片的位置)</h2>
+<p>控制背景图片相对于元素的对齐方式。</p>
+<p>默认值：left top or 0% 0%</p>
+<p>
+  background-position取值有两种方式：一种是单值，另一个默认为center；一种是双值，分别是水平和竖直方向上的对齐。
+</p>
+<p>可用值：</p>
+<ul>
+  <li>top 图片top border对齐父容器的top，即顶端对齐，默认水平方向居中。</li>
+  <li>top center同上</li>
+  <li>top right 靠顶、靠右</li>
+  <li>center left 靠左 竖直居中</li>
+  <li>center center</li>
+  <li>center right</li>
+  <li>bottom left</li>
+  <li>bottom center</li>
+  <li>bottom right</li>
+  <li>10px 20px</li>
+  <li>10% 20%</li>
+</ul>
+
+<h2>background-repeat(背景图片的重复方式)</h2>
+<p>默认值：repeat</p>
+<p>可用值：</p>
+<ul>
+  <li>repeat 默认值，水平和竖直方向重复</li>
+  <li>repeat-x 水平方向重复</li>
+  <li>repeat-y 竖直方向重复</li>
+  <li>no-repeat 不重复</li>
+  <li>round 重复，但是最后一张图片会被拉伸</li>
+  <li>space 重复，但是最后一张图片会被拉伸，且图片之间会均匀分布</li>
+</ul>
+<h2>background-attachment(背景图片滚动行为)</h2>
+<p>控制背景图片是否随着页面滚动。</p>
+<p>默认值：scroll</p>
+<p>可用值：</p>
+<ul>
+  <li>scroll 背景图片随着页面滚动</li>
+  <li>fixed 背景相对于视口（viewport）固定</li>
+  <li>local 背景图片与当前元素的滚动条同步</li>
+</ul>
+<p>local示例：背景跟着子元素滚动</p>
+<pre><code>
+div {
+  background-image: url('/img/ocean-long-bg.jpg');
+  background-attachment: local;
+}
+</code></pre>
+<div
+  style="
+    width: 200px;
+    height: 200px;
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-color: hsl(221, 52%, 8%);
+    overflow: scroll;
+    color: white;
+  "
+>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+  <p>背景图片与当前元素的滚动条一起滚动</p>
+</div>
+<p>fix示例</p>
+<pre><code>
+div{
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-attachment: fixed;
+}
+</code></pre>
+<div
+  style="
+    width: 200px;
+    min-height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+  "
+>
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-image: url('/img/ocean-long-bg.jpg');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      border: 1px solid black;
+    "
+  >
+    background-attachment:fix 是 相对于视口固定
+  </div>
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-image: url('/img/ocean-long-bg.jpg');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      border: 1px solid black;
+    "
+  >
+    视口（viewport），也就是 window。
+  </div>
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-image: url('/img/ocean-long-bg.jpg');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      border: 1px solid black;
+    "
+  ></div>
+</div>
+
+<p>示例：结合scroll event实现视觉差(parallax)</p>
+<pre><code>
+
+</code></pre>
+<div
+  style="
+    width: 400px;
+    height: 300px;
+    background-image: url('/img/ocean-long-bg.jpg');
+    background-color: rgb(2, 8, 10);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+  "
+  id="parallax-div"
+>
+  <p>
+    监听scroll事件，通过div.scrollTop()返回滚动条下滑的距离，in
+    px。设定background image
+    滚动速率为其0.1倍，实现视觉差效果。更新background-posisiton-y的值，负数表示向上移动。
+  </p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+  <p>keep scrolling down</p>
+</div>
+<script>
+  const parallaxDiv = document.getElementById("parallax-div");
+  parallaxDiv.addEventListener("scroll", (e) => {
+    const scrollTop = parallaxDiv.scrollTop; // 滚动条滚动的距离 in px
+    const scrollHeight = parallaxDiv.scrollHeight; // 元素的总高度 in px
+    const clientHeight = parallaxDiv.clientHeight; // 元素的可视高度 in px
+    const backgroundScrollSpeed = 0.1;
+    const backgroundPosition = -scrollTop * backgroundScrollSpeed;
+    parallaxDiv.style.backgroundPositionY = `${backgroundPosition}px`;
+    // generate a new content element
+    const p = document.createElement("p");
+    p.textContent = "keep scrolling down";
+    parallaxDiv.appendChild(p);
+  });
+</script>
