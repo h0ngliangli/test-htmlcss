@@ -1,0 +1,71 @@
+<style>
+.section-parallax {
+  /* relative的作用是让子元素的绝对定位相对于这个元素 */
+  position: relative;
+  height: 400px;
+  width: 400px;
+}
+.section-parallax-bg {
+  /* absolute的作用是让这个元素脱离文档流，从而可以使用top, left, right, bottom属性来定位 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/ocean-long-bg.png');
+  background-size: cover;
+  background-position: center;
+  /* transform: translateZ(0)的作用是让这个元素创建一个新的层叠上下文，从而可以使用z-index属性来控制层叠顺序 */
+  /* transform: translateZ(0); */
+  z-index: -1;
+}
+
+.section-parallax-content {
+  /* position: relative; */
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  z-index: 1;
+}
+</style>
+<h2>Parallax视觉差</h2>
+<div class="section-parallax">
+  <div class="section-parallax-bg"></div>
+  <div class="section-parallax-content">
+    <h3>这是一个视觉差效果</h3>
+    <p>视觉差效果是指在滚动页面时，背景图片的移动速度比前景元素的移动速度慢，从而产生一种立体感的效果。</p>
+    <p>首先，container元素使用position: relative, 它的作用是让
+        .section-parallax-bg元素的绝对定位相对于这个元素。然后，.section-parallax-bg元素使用position: absolute, 
+        它的作用是让这个元素脱离文档流，从而可以使用top, left, right, bottom属性来定位。
+        最后，.section-parallax-bg元素使用transform: translateZ(0), 它的作用是让这个元素创建一个新的层叠上下文，
+        从而可以使用z-index属性来控制层叠顺序。</p>
+    </p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+    <p>让我把文字写长一点，这样才会有滚动条出现。</p>
+
+    <p></p>
+  </div>
+
+</div>
+<script>
+    document.querySelector('.section-parallax-content').addEventListener('scroll', function (event) {
+            let scrollTop = this.scrollTop;
+            console.log(scrollTop);
+            let bg = document.querySelector('.section-parallax-bg');
+            const position = `0% -${scrollTop * 0.1}px`;
+            console.log(position);
+            bg.style.backgroundPosition = position;
+        });
+    document.addEventListener('DOMContentLoaded', function () {
+        
+    });
+</script>
