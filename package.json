@@ -2,6 +2,7 @@
   "name": "test-htmlcss",
   "version": "1.0.0",
   "main": "index.html",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
@@ -11,5 +12,16 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h0ngliangli/test-htmlcss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/h0ngliangli/test-htmlcss/issues"
+  },
+  "homepage": "https://github.com/h0ngliangli/test-htmlcss#readme",
+  "description": "",
+  "dependencies": {
+    "firebase": "^11.2.0"
+  }
 }
