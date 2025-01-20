@@ -1,0 +1,61 @@
+<h2>Copy and Paste Image code</h2>
+
+<p>Copy and paste the following code to see the image:</p>
+<div>
+  <pre><code>
+div.addEventListener("paste", async (event)=>{
+    // clipboard可能含有多余一个元素（文本，图片，文件等）
+    const items = event.clipboardData.items
+    for (let item of items) {
+        // 每个item都是DataTransferItem对象
+        if (item.type.startsWith("image/")) {
+            const file = item.getAsFile() // 这个File是Blob对象，在内存中，还没有保存到磁盘
+            const imgUrl = URL.createObjectURL(file) // 内存对象的URL
+            const img = document.createElement("img")
+            img.src = imgUrl
+            img.width = ...
+            img.height = ... 
+            
+        }
+    }
+})
+    </code></pre>
+</div>
+<p>Copy and Paste an image down below</p>
+<div class="paste-board"></div>
+
+<style>
+  .paste-board {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+  }
+</style>
+
+<script>
+  const pasteBoardDiv = document.querySelector(".paste-board");
+  pasteBoardDiv.addEventListener("paste", async (event) => {
+    // clipboard can contain multiple items (text, image, files, etc)
+    const items = event.clipboardData.items;
+    for (let item of items) {
+      if (item.type.startsWith("image/")) {
+        // DataTransferItem.getAsFile() returns a File object
+        // the file name is not available in clipboard data
+        // the content of the file is available as a Blob
+        // which is in memory and not yet saved to disk
+        const file = item.getAsFile();
+        // create a string that contains URL for the Blob
+        // the URL represents the Blob in memory
+        const imgUrl = URL.createObjectURL(file);
+        const img = document.createElement("img");
+        img.src = imgUrl;
+        img.width = pasteBoardDiv.clientWidth;
+        img.height = pasteBoardDiv.clientHeight;
+        // remove children before adding new image
+        pasteBoardDiv.innerHTML = "";
+        pasteBoardDiv.appendChild(img);
+      }
+    }
+  });
+</script>
