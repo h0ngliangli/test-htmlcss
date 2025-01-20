@@ -1,0 +1,2 @@
+Firebase Deploy: 
+firebase deploy --only hosting
