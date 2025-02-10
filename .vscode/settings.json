@@ -1,4 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "liveServer.settings.multiRootWorkspaceName": "test-htmlcss"
+    "liveServer.settings.multiRootWorkspaceName": "test-htmlcss",
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
 }
